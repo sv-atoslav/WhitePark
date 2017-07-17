@@ -1,0 +1,13 @@
+<div align = "center">
+	<h2><%= @article.title %></h2>
+	<table width="100%"><tbody><tr>
+		<td width="50%"><%= image_tag(Photo.find(@article.icon).title , alt:"", style: 'width: 100%;') %></td>
+		<td width="50%">
+			<%= @article.description.html_safe %>
+			<p class="article-date" align="right" vertical-align="bottom"><%= @article.published %></p>
+		</td>
+	</tr></tbody></table>
+	<div align="left"><% @old_list.each do |one_foto_id| %>
+		<%= image_tag(Photo.find(one_foto_id).title, style: 'height: 100px;' )%>
+	<% end %></div>
+</div>

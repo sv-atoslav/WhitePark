@@ -1,0 +1,18 @@
+<%= form_with(model: photo_in_slayder, local: true) do |form| %>
+  <% if photo_in_slayder.errors.any? %><div id="error_explanation">
+      <h2><%= pluralize(photo_in_slayder.errors.count, "error") %> prohibited this photo_in_slayder from being saved:</h2>
+      <ul><% photo_in_slayder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %></ul>
+  </div><% end %>
+  <p>Slayder</p>
+  <div class="field"><%= form.label :slyder %><%= form.collection_select(:slyder, Slayder.all, :id, :title)%></div>
+  <p>Photo</p>
+  <div class="field"><% @photo_list.each do |onefoto| %>
+      <%= form.radio_button(:photo, onefoto.id) %>
+      <%= form.label(:photo, onefoto.title) %>
+      <% way="http://localhost:3000/assets/wpimg/" + onefoto.title %>
+      <img src="<%= way %>" width="100px" alt="<%= onefoto.description %>"><br>
+  <% end %></div>
+  <div class="actions"><%= form.submit %></div>
+<% end %>

@@ -1,0 +1,33 @@
+<div class="cuisine-block big-block"><div class="block">
+	<h2>кухня</h2>
+	<hr class = "spec-hr"/>
+	<p>Гордостью WhitePark при проведении частных мероприятий является высококлассный кейтеринг. Здесь гениальные повара под руководством своего уникального шефа создают настоящие шедевры кулинарного искусства. В зависимости от темы и общей направленности вечеринки, вы сможете заказать классический фуршет с закусками из дорогих видов мяса и рыбы, банкет с кухней в стиле фьюжн или легкий бранч для всей семьи. Выбор всегда остается за клиентом, а ресторан WhitePark воплощает желания в действительность.</p>
+</div></div>
+<!-- START Most Warning Part -->
+<% if @visible_part %><div class="dishes-block">
+	<div align="center"><small>должен отобразиться блок</small></div>
+	<div class="dishes-block-points block"></div>
+	<div class="owl-carousel"><% @kitchen_photo_list.each do |dishe| %><div class="big-block">
+		<div class="background"><%= image_tag(Photo.find(dishe.photo).title) %></div>
+		<div class="block"><div class="spec-block spec-block-right">
+			<hr class = "spec-hr"/>
+			<p>Наши блюда готовят профессионалы</p>
+		</div></div>
+	</div><% end %></div>
+	<div class="arrows arrow-left" ><%= image_tag("arrow-brown.png" , alt:"<<")%></div>
+	<div class="arrows arrow-right"><%= image_tag("arrow-brown.png" , alt:">>")%></div>
+</div><% end %>
+<!-- END Most Warning Part -->
+<div class="chef-block big-block"><div class="block">
+	<div class="chef-image"><%= image_tag("chef-image.png") %></div>
+	<div class="chef-content">
+		<h2>Трифонов Сергей Викторович</h2>
+		<hr class="spec-hr">
+		<h3>Шеф-повар, Бренд-шеф</h3>
+		<p><b>Стажировки:</b></p>
+		<p>Дели (Индия)-1994 год-1 месяц (изучение блюд индийской кухни), Арнштад(Германия)-2006год-1 месяц (презентация блюд Русской кухни, знакомство с  Немецкой кухней (Тюрингия)</p>
+		<p><b>Профессиональные навыки:</b></p>
+		<p>Член Национальной Гильдии Шеф-поваров, консультант компании"Сухаревка"(составление меню и обучение персонала, запуск кофейня"Рио"г. Уфа). Шеф-консультант консалтинговой компании"Бюро ресторанных технологий."РРК "Кеды" г. Ульяновск, Член команды Шеф-поваров"Пировный"., (Тим-билдинги, банкеты, фуршеты) Провел более 100 мастер-классов длякомпании"МЕТРО"по теме мясо, рыба, морепродукты/Индийская кухня, ТЕХ_МЕХ.</p>
+		<a class="nice-button" href="">скачать банкетное меню</a>
+	</div>
+</div></div>

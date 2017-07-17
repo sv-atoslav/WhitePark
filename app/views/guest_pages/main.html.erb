@@ -1,0 +1,34 @@
+<div class="big-block calendar-block">
+	<div class="background owl-carousel"><% @main_photo_list.to_a.each do |one_phot_in_sl| %>
+		<%= image_tag(Photo.find(one_phot_in_sl.photo).title) %>
+	<% end %></div>
+	<div class="arrows arrow-left" ><%= image_tag "arrow-white.png", alt:"left"  %></div>
+	<div class="arrows arrow-right"><%= image_tag "arrow-white.png", alt:"rigth" %></div>
+	<div class="block"><div class="spec-block">
+		<h2>Проверьте
+			<br/>свободна ли
+			<br/>ваша дата
+		</h2>
+		<div class="spec-calendar"></div>
+		<a class="nice-button call-pop" href="javascript:void(0);">проверить</a>
+	</div></div>
+</div>
+<% if @visible_part %><div class="photoreports-block  big-block"><div class="block">
+	<h2>Направления</h2>
+	<hr class="spec-hr">
+	<div class="photoreports"><% @category_list.each do |one_category|%>
+		<% @ssilka ="//localhost:3000/category_events/" %>
+		<% @ssilka += one_category.id.to_s %>
+		<% @ssilka += "/" %>
+		<% @ssilka += @word_to_see %>
+		<a href=<%= @ssilka %> class="album">
+			<% if one_category.icon < 1 %><p>Картинка отсутствует</p>
+			<% else %><div class="album-bg"><%= image_tag Photo.find(one_category.icon).title %></div>
+			<% end %>
+			<div class="album-title">
+				<p><%= one_category.title %></p>
+				<h4>подробнее</h4>
+			</div>
+		</a>
+	<% end %></div>
+</div></div><% end %>

@@ -1,0 +1,13 @@
+I"“(function() {
+  var summer_note;
+
+  summer_note = $('article_description');
+
+  summer_note.summernote;
+
+  ({
+    height: 300
+  });
+
+}).call(this);
+:ET

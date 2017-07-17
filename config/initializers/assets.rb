@@ -1,0 +1,43 @@
+#start list of .css
+	Rails.application.config.assets.precompile += %w( tents.css )
+	Rails.application.config.assets.precompile += %w( users.css )
+	Rails.application.config.assets.precompile += %w( events.css )
+	Rails.application.config.assets.precompile += %w( photos.css )
+	Rails.application.config.assets.precompile += %w( articles.css )
+	Rails.application.config.assets.precompile += %w( opinions.css )
+	Rails.application.config.assets.precompile += %w( slayders.css )
+	Rails.application.config.assets.precompile += %w( category_events.css )
+	Rails.application.config.assets.precompile += %w( photo_in_events.css )
+	Rails.application.config.assets.precompile += %w( photo_in_articles.css )
+	Rails.application.config.assets.precompile += %w( photo_in_slayders.css )
+	Rails.application.config.assets.precompile += %w( not_published_opinions.css )
+	
+	#for beauty evant, articles
+	Rails.application.config.assets.precompile += %w( wpstyles/index.css )
+	Rails.application.config.assets.precompile += %w( wpstyles/reset.min.css )
+	Rails.application.config.assets.precompile += %w( wpstyles/font-awesome.min.css )
+	Rails.application.config.assets.precompile += %w( wpstyles/owlcarousel/owl.carousel.min.css )
+	Rails.application.config.assets.precompile += %w( wpstyles/owlcarousel/owl.theme.default.min.css )
+#end list of .css
+#start list of javascripts (.js)
+	Rails.application.config.assets.precompile += %w( tents.js )
+	Rails.application.config.assets.precompile += %w( users.js )
+	Rails.application.config.assets.precompile += %w( events.js )
+	Rails.application.config.assets.precompile += %w( photos.js )
+	Rails.application.config.assets.precompile += %w( articles.js )
+	Rails.application.config.assets.precompile += %w( opinions.js )
+	Rails.application.config.assets.precompile += %w( slayders.js )
+	Rails.application.config.assets.precompile += %w( category_events.js )
+	Rails.application.config.assets.precompile += %w( photo_in_events.js )
+	Rails.application.config.assets.precompile += %w( photo_in_articles.js )
+	Rails.application.config.assets.precompile += %w( photo_in_slayders.js )
+	Rails.application.config.assets.precompile += %w( not_published_opinions.js )
+
+	#for beauty evant, articles
+	Rails.application.config.assets.precompile += %w( jquery/jquery-2.2.3.min.js )
+	Rails.application.config.assets.precompile += %w( jquery/jquery-ui.min.js )
+	Rails.application.config.assets.precompile += %w( jquery/jquery-ui.multidatespicker.js )
+	Rails.application.config.assets.precompile += %w( jquery/jquery.maskedinput.min.js )
+	Rails.application.config.assets.precompile += %w( owl.carousel.min.js )
+
+#end list of javascripts (.js)

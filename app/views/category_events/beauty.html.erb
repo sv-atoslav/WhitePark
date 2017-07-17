@@ -1,0 +1,27 @@
+<hr>
+<div align = "center">
+	<h2><%= @category_event.title %></h2>
+	<p><%= image_tag(Photo.find(@category_event.icon).title , alt:"", style: 'width: 50%;') %><%= @category_event.description %></p>
+</div>
+<hr>
+<% if @old_list.count > 0 %>
+<div class="articles-block big-block"><div class="block">
+	<h2>События</h2>
+	<hr class = "spec-hr"/>
+	<div class="articles"><% @old_list.each do |state_id| %><div class="article">
+		<% state = Event.find(state_id) %>
+		<div class="article-img"><%= image_tag (Photo.find(state.icon)).title %></div>
+		<div class="article-content">
+			<h2><%= state.title %></h2>
+			<p><%= state.description %></p>
+			<a class="nice-button" href="//localhost:3000/events/<%= state.id.to_s %>/<%= @word_to_see %>">подробнее</a>
+		</div>
+	</div><% end %></div>
+	<div class="special-links">
+		<div class="dots-arrow dots-arrow-left"><%= image_tag "dots-arrow.png" , alt:"<<" %></div>
+		<div class="special-link active"><span></span></div>
+		<div class="special-link"><span></span></div>
+		<div class="special-link"><span></span></div>
+		<div class="dots-arrow dots-arrow-right"><%= image_tag "dots-arrow.png" , alt:">>" %></div>
+	</div>
+</div></div><% end %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<h1>Photo In Events</h1>
+<% if @photo_in_events.first.nil? %>
+  <i>эта таблица пустая</i>
+<% else %><table class="sv_table">
+  <thead><tr>
+    <th>Photo</th>
+    <th>Event</th>
+    <th colspan="3"></th>
+  </tr></thead>
+  <tbody><% @photo_in_events.each do |photo_in_event| %><tr>
+    <td><%if photo_in_event.photo.nil? || photo_in_event.photo < 1 %>image not exist
+    <% else %>
+      <% photo = Photo.find(photo_in_event.photo) %>
+      <%= image_tag( photo.title , style: "width: 100px;", alt: photo.description ) %>
+    <% end %>
+    </td>
+    <td>
+      <% if photo_in_event.event.nil? || photo_in_event.event < 1 %>event not exist
+      <% else %><%= Event.find(photo_in_event.event).title %>
+      <% end  %>
+    </td>
+    <td><%= link_to 'Show', photo_in_event %></td>
+    <td><%= link_to 'Edit', edit_photo_in_event_path(photo_in_event) %></td>
+    <td><%= link_to 'Destroy', photo_in_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr><%  end %></tbody>
+</table><% end %>
+<br><%= link_to 'New Photo In Event', new_photo_in_event_path %>

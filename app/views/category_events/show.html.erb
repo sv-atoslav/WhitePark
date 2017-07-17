@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<p><strong>Title:</strong><%= @category_event.title %></p>
+<p><strong>Description:</strong><%= @category_event.description %></p>
+<p><strong>Icon:</strong><%= @category_event.icon %></p>
+<%= link_to 'Edit', edit_category_event_path(@category_event) %> |
+<%= link_to 'Back', category_events_path %> |
+<a href="//localhost:3000/category_events/<%= @category_event.id %>/<%= @word_to_see %>">Beauty</a>
+

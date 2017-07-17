@@ -1,0 +1,14 @@
+<% if @visible_part %><div class="articles-block big-block"><div class="block">
+	<h2>Статьи</h2>
+	<hr class = "spec-hr"/>
+	<div class="articles"><% @article_list.each do |state| %><div class="article">
+		<div class="article-img"><%= image_tag(Photo.find(state.icon).title) %></div>
+		<div class="article-content">
+			<h2> <%= state.title %> </h2>
+			<p class="article-date"><%= state.published %></p>
+			<p> <%= state.description %> </p>
+			<a class="nice-button" href="//localhost:3000/articles/<%= state.id.to_s %>/<%= @word_to_see %>">подробнее</a>
+		</div>
+	</div><% end -%></div>
+	<u><%= will_paginate @article_list, :class => "special-links", :link_separator => "| |", :previous_label =>"предыдущая", :next_label =>"следующая" %></u>
+</div></div><% end %>

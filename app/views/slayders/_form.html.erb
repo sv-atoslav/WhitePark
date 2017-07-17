@@ -1,0 +1,10 @@
+<%= form_with(model: slayder, local: true) do |form| %>
+  <% if slayder.errors.any? %><div id="error_explanation">
+      <h2><%= pluralize(slayder.errors.count, "error") %> prohibited this slayder from being saved:</h2>
+      <ul><% slayder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %></ul>
+  </div><% end %>
+  <div class="field"><%= form.label :title %><%= form.text_field :title, id: :slayder_title %></div>
+  <div class="actions"><%= form.submit %></div>
+<% end %>
