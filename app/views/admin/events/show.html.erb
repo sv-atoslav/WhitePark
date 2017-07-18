@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+<p><strong>Category:</strong><%= @event.category %></p>
+<p><strong>Title:</strong><%= @event.title %></p>
+<p><strong>Description:</strong><%= @event.description.html_safe %></p>
+<p><strong>Icon:</strong><%= @event.icon %></p>
+<p><strong>Many fotos:</strong></p>
+<% @old_list.each do |one_foto_id| %>
+	,<%= image_tag(Photo.find(one_foto_id).title, style: "width: 100px;") %>
+<% end %>.
+<br><%= link_to 'Edit', action: "edit"  %> |
+<%=     link_to 'Back', action: "index" %> |
+<a href="//localhost:3000/events/<%= @event.id %>/<%= @word_to_see %>">Beauty</a>

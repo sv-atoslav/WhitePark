@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<h1>Slayders</h1>
+<% if @slayders.first.nil? %>
+  <i>эта таблица пустая</i>
+<% else %><table class="sv_table">
+  <thead><tr>
+    <th>Title</th>
+    <th colspan="3"></th>
+  </tr></thead>
+  <tbody><% @slayders.each do |slayder| %><tr>
+    <td><%= slayder.title %></td>
+    <td><%= link_to 'Show', admin_slayder_path(slayder) %></td>
+    <td><%= link_to 'Edit', edit_admin_slayder_path(slayder) %></td>
+    <td><%= link_to 'Destroy', admin_slayder_path(slayder), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr><% end %></tbody>
+</table><% end %>
+<br><%= link_to 'New Slayder', action: "new" %>

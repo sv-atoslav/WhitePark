@@ -1,0 +1,18 @@
+<div align = "center">
+	<h2><%= @category_event.title %></h2>
+	<p><%= image_tag(Photo.find(@category_event.icon).title , alt:"", style: 'width: 50%;') %><%= @category_event.description %></p>
+</div>
+<% if @old_list.count > 0 %>
+<div class="articles-block big-block"><div class="block">
+	<hr class = "spec-hr"/>
+	<h2>События</h2>
+	<div class="articles"><% @old_list.each do |state_id| %><div class="article">
+		<% state = Event.find(state_id) %>
+		<div class="article-img"><%= image_tag (Photo.find(state.icon)).title %></div>
+		<div class="article-content">
+			<h2><%= state.title %></h2>
+			<p><%= state.description.html_safe %></p>
+			<a class="nice-button" href="//localhost:3000/events/<%= state.id.to_s %>/<%= @word_to_see %>">подробнее</a>
+		</div>
+	</div><% end %></div>
+</div></div><% end %>

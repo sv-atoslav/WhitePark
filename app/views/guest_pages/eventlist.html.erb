@@ -5,7 +5,7 @@
 		<div class="article-img"><%= image_tag (Photo.find(state.icon)).title %></div>
 		<div class="article-content">
 			<h2> <%= state.title %> </h2>
-			<p>	<%= state.description %> </p>
+			<p>	<%= state.description.html_safe %> </p>
 			<a class="nice-button" href="//localhost:3000/events/<%= state.id.to_s %>/<%= @word_to_see %>">подробнее</a>
 		</div>
 	</div><% end -%></div>

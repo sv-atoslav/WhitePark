@@ -1,0 +1,18 @@
+<%= form_with(model: [:admin, photo_in_slayder], local: true) do |form| %>
+  <% if photo_in_slayder.errors.any? %><div id="error_explanation">
+      <h2><%= pluralize(photo_in_slayder.errors.count, "error") %> prohibited this photo_in_slayder from being saved:</h2>
+      <ul><% photo_in_slayder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %></ul>
+  </div><% end %>
+  <p>Slayder</p>
+  <!-- I have misspelling when create table -->
+  <div class="field"><%= form.label :slyder %><%= form.collection_select(:slyder, Slayder.all, :id, :title)%></div>
+  <p>Photo</p>
+  <div class="field"><% @photo_list.each do |one_photo| %>
+    <%= image_tag(one_photo.title, alt: one_photo.description, style: "width: 100px;") %>
+    <%= form.radio_button(:photo, one_photo.id) %>
+    <%= form.label(:photo, one_photo.title) %><br>
+  <% end %></div>
+  <div class="actions"><%= form.submit %></div>
+<% end %>

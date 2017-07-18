@@ -6,7 +6,7 @@
 		<div class="article-content">
 			<h2> <%= state.title %> </h2>
 			<p class="article-date"><%= state.published %></p>
-			<p> <%= state.description %> </p>
+			<p> <%= state.description.html_safe %> </p>
 			<a class="nice-button" href="//localhost:3000/articles/<%= state.id.to_s %>/<%= @word_to_see %>">подробнее</a>
 		</div>
 	</div><% end -%></div>

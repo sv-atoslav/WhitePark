@@ -180,8 +180,18 @@
 <div class="main-block">
 	<div class="main">
 		<a href="/WhitePark">Главная</a>
-		<a href="/kuhnya">Кухня</a><!-- 
+		<a href="/kuhnya">Кухня</a>
 		<div class="sub-main-block">
+			<div class="sub-main-main"><a href="/sobitia">События</a><p class="sub-main-switch"><i class="fa fa-chevron-down" aria-hidden="true"></i></p></div>
+			<div class="sub-main"><% CategoryEvent.all.each do |one_category| %>
+				<% ssilka  = "//localhost:3000/category_events/" %>
+				<% ssilka += one_category.id.to_s %>
+				<% ssilka += "/prosmotr" %>
+				<!-- need be = AppContr.word_to_see -->
+				<a href="<%= ssilka %>"><%= one_category.title %></a>
+			<% end %></div>
+		</div>
+		<!-- <div class="sub-main-block">
 			<div class="sub-main-main">
 				<a href="service_page.html">Сервис</a>
 				<p class="sub-main-switch"><i class="fa fa-chevron-down" aria-hidden="true"></i></p>
@@ -204,7 +214,6 @@
 				<a href="">Сервис 5</a>
 			</div>
 		</div> -->
-		<a href="/sobitia">События</a>
 		<a href="/statii" >Статьи</a>
 		<a href="/otzivi">Отзывы</a>
 		<a href="/o_nas" >О нас</a>
