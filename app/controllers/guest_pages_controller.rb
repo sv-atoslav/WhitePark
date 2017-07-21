@@ -1,7 +1,16 @@
 class GuestPagesController < ApplicationController
-	before_action :determine_word_to_see,	only: [:main, :list_of_articles, :eventlist]
+	before_action :determine_word_to_see
 	layout "application_guest"
 	
+	def about_us
+	end
+
+	def contacts
+	end
+
+	def site_map
+	end
+
 	def main
 		@main_slayder = Slayder.find_by(title: "главная")
 		if !@main_slayder.nil?
@@ -40,7 +49,8 @@ class GuestPagesController < ApplicationController
 		exist_list(@event_list)
 	end
 
-	def about_us
+	def download_menu
+		send_file("#{Rails.root}/app/assets/otherfiles/menu2017.xlsx")
 	end
 
 	private

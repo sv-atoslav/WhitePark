@@ -1,10 +1,12 @@
 <div align = "center">
 	<h2><%= @event.title %></h2>
-	<table width="100%"><tbody><tr>
+	<!-- <table width="100%"><tbody><tr>
 		<td width="50%"><%= image_tag(Photo.find(@event.icon).title , alt:"", style: 'width: 100%;') %></td>
 		<td width="50%"><%= @event.description.html_safe %></td>
-	</tr></tbody></table>
-	<div align="left"><% @old_list.each do |one_foto_id| %>
-		<%= image_tag(Photo.find(one_foto_id).title, style: 'height: 100px;' ) %>
+	</tr></tbody></table> -->
+	<hr class="spec-hr">
+	<%= @event.description.html_safe %>
+	<div class="about-us-image-set"><% @old_list.each do |one_foto_id| %>
+		<%= image_tag(Photo.find(one_foto_id).title, size: "360x360" ) %>
 	<% end %></div>
 </div>

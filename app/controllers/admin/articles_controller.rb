@@ -3,7 +3,7 @@ class Admin::ArticlesController < ApplicationController
   before_action :set_article,             only: [:update, :destroy]
   before_action :update_many_photos_list, only: [:update, :destroy, :create]
   before_action :set_photo_list,          only: [:edit, :new]
-  before_action :determine_word_to_see,   only: [:show, :index]
+  before_action :determine_word_to_see,   only: [:show, :index, :beauty]
 
   # GET /articles
   # GET /articles.json

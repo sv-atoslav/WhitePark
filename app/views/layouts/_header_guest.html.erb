@@ -180,15 +180,16 @@
 <div class="main-block">
 	<div class="main">
 		<a href="/WhitePark">Главная</a>
-		<a href="/kuhnya">Кухня</a>
+		<%# link_to "Главная", path: WhitePark_path %>
+		<a href="/statii">Статьи</a>
+		<%# link_to "Статьи",  action: "list_of_articles" %>
 		<div class="sub-main-block">
-			<div class="sub-main-main"><a href="/sobitia">События</a><p class="sub-main-switch"><i class="fa fa-chevron-down" aria-hidden="true"></i></p></div>
+			<div class="sub-main-main">
+			<%# link_to "События", action: "eventlist" %>
+			<a href="/sobitia">События</a>
+			<p class="sub-main-switch"><i class="fa fa-chevron-down" aria-hidden="true"></i></p></div>
 			<div class="sub-main"><% CategoryEvent.all.each do |one_category| %>
-				<% ssilka  = "//localhost:3000/category_events/" %>
-				<% ssilka += one_category.id.to_s %>
-				<% ssilka += "/prosmotr" %>
-				<!-- need be = AppContr.word_to_see -->
-				<a href="<%= ssilka %>"><%= one_category.title %></a>
+				<a href="//localhost:3000/category_events/<%= one_category.id.to_s %><%= @word_to_see %>"><%= one_category.title %></a>
 			<% end %></div>
 		</div>
 		<!-- <div class="sub-main-block">
@@ -214,9 +215,16 @@
 				<a href="">Сервис 5</a>
 			</div>
 		</div> -->
-		<a href="/statii" >Статьи</a>
+		<a href="/map">Карта площадки</a>
+		<%# link_to "Карта площадки", action: "map_park" %>
+		<a href="/kuhnya">Кухня</a>
+		<%# link_to "Кухня",	action: "kitchen"	%>
+		<a href="/o_nas">О нас</a>
+		<%# link_to "О нас",	action: "about_us"	%>
 		<a href="/otzivi">Отзывы</a>
-		<a href="/o_nas" >О нас</a>
+		<%# link_to "Отзывы",	action: "review"	%>
+		<a href="/kontakti">Контакты</a>
+		<%# link_to "Контакты", action: "contacts"	%>
 	</div>
 	<div class="main-switch"><span></span></div>
 </div>

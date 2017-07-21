@@ -19,4 +19,12 @@ class Admin::DashboardsController < ApplicationController
   def dashboard_5
   end
 
+  def dashboard_white_park
+    if params["new_email"]
+      # Moderator.first.email = params["new_email"]
+      current_moderator.email = params["new_email"]
+      current_moderator.save
+    end 
+  end
+
 end
