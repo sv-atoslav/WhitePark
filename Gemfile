@@ -5,7 +5,11 @@ gem 'rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
+# what I install {
 gem 'will_paginate', '~> 3.1.0'
+gem 'devise'
+
+#}
 
 # gem 'summernote-rails'
 # gem 'simple_form'
@@ -14,9 +18,10 @@ gem 'will_paginate', '~> 3.1.0'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
-# для перехода на пост гресс
+# for change sqlite3 to postgre
 # gem 'yaml_db', :git => 'git://github.com/ludicast/yaml_db.git'
 gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 

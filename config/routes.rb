@@ -1,10 +1,22 @@
 Myapp::Application.routes.draw do
 
+  devise_for    :moderators, controllers: { 
+    unlocks:    'moderators/unlocks'   , 
+    sessions:   'moderators/sessions'  ,
+    passwords:  'moderators/passwords' , 
+    confirations:  'moderators/confirations'  , 
+    registrations: 'moderators/registrations' , 
+    # omniauth_callbacks: 'moderators/omniauth_callbacks', 
+  }
   # resources :articles, :category_events, :events, :not_published_opinions, :opinions, :photo_in_articles, :photo_in_events, :photo_in_slayders, :photos, :slayders, :tents, :users
+  
   # You can have the root of your site routed with "root"
   root to: 'guest_pages#main'
 
-  get '/admin', to: 'admin/dashboards#dashboard_1'
+  # get '/admin', to: 'admin/dashboards#dashboard_1'
+  get  "/admin",  to: "admin/dashboards#dashboard_white_park"
+  post "/admin",  to: "admin/dashboards#dashboard_white_park"
+  # moderator_root to: "admin/dashboards#dashboard_white_park"
 
   namespace :admin do
     resources :articles, :category_events, :events, :not_published_opinions, :opinions, :photo_in_articles, :photo_in_events, :photo_in_slayders, :photos, :slayders, :tents, :users
@@ -16,15 +28,18 @@ Myapp::Application.routes.draw do
   get "events/:id/prosmotr",   to: 'admin/events#beauty'
   get "category_events/:id/prosmotr", to: 'admin/category_events#beauty'
 
-  get 'WhitePark',to:'guest_pages#main'
-  get 'otzivi',   to:'guest_pages#review'
-  get 'kuhnya',   to:'guest_pages#kitchen'
-  get 'statii',   to:'guest_pages#list_of_articles'
-  get 'o_nas',    to:'guest_pages#about_us'
-  get 'map',      to:'guest_pages#map_park'
-  get 'sobitia',  to:'guest_pages#eventlist'
+  get 'WhitePark', to: 'guest_pages#main'
+  get 'otzivi',    to: 'guest_pages#review'
+  get 'kuhnya',    to: 'guest_pages#kitchen'
+  get 'statii',    to: 'guest_pages#list_of_articles'
+  get 'o_nas',     to: 'guest_pages#about_us'
+  get 'map',       to: 'guest_pages#map_park'
+  get 'sobitia',   to: 'guest_pages#eventlist'
+
+  # get '/moderators/sign_in', to: 'admin/pages#login_white_park'
 
   #'inbox' routes # all in down completed
+  get "admin/dashboards/dashboard_white_park"
   get "admin/dashboards/dashboard_1"
   get "admin/dashboards/dashboard_2"
   get "admin/dashboards/dashboard_3"
@@ -91,6 +106,8 @@ Myapp::Application.routes.draw do
   get "admin/pages/invoice_print"
   get "admin/pages/login"
   get "admin/pages/login_2"
+  get 'admin/pages/login_white_park'
+  get 'admin/pages/log_out'
   get "admin/pages/forgot_password"
   get "admin/pages/register"
   get "admin/pages/not_found_error"
