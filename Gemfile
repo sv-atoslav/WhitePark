@@ -8,7 +8,10 @@ gem 'font-awesome-rails'
 # what I install {
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
+<<<<<<< HEAD
 gem 'dynamic_sitemaps'
+=======
+>>>>>>> 7d770c6636af9284f3f661edf882248e30c3de8d
 
 #}
 
