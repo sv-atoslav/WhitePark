@@ -1,11 +1,8 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery with: :exception
-	# before_action :authenticate_moderator!
-<<<<<<< HEAD
+	
 	WillPaginate.per_page = 5
-=======
-	WillPaginate.per_page = 1
->>>>>>> 7d770c6636af9284f3f661edf882248e30c3de8d
+
 	before_action :divider_access
 	
 	def set_photo_list
@@ -16,11 +13,11 @@ class ApplicationController < ActionController::Base
 		@word_to_see = "/prosmotr"
 	end
 
-	def my_automatic_redirecter
-		if way=="sitemap.xml"
-			redirect_to "sitemaps/sitemap.xml"
-		end
-	end
+	# def my_automatic_redirecter
+	# 	if way=="sitemap.xml"
+	# 		redirect_to "sitemaps/sitemap.xml"
+	# 	end
+	# end
 
 	def divider_access
 		puts "controller_name = " + controller_name

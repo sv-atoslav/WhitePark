@@ -37,8 +37,8 @@ Myapp::Application.routes.draw do
   get 'sobitia',      to: 'guest_pages#eventlist'
   get 'kontakti',     to: 'guest_pages#contacts'
   get 'download',     to: 'guest_pages#download_menu'
-  get "sitemap",      to: 'guest_pages#site_map'
-  get "sitemap.xml",  to: 'guest_pages#site_map', format: :xml, as: :sitemap
+  get "sitemap_to_site",      to: 'guest_pages#site_map'
+  get "sitemap_to_site.xml",  to: 'guest_pages#site_map', format: :xml, as: :sitemap
 
   # get '/moderators/sign_in', to: 'admin/pages#login_white_park'
 
