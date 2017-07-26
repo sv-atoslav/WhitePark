@@ -28,7 +28,6 @@ Myapp::Application.routes.draw do
   get "events/:id/prosmotr",   to: 'admin/events#beauty'
   get "category_events/:id/prosmotr", to: 'admin/category_events#beauty'
 
-<<<<<<< HEAD
   get 'WhitePark',    to: 'guest_pages#main'
   get 'otzivi',       to: 'guest_pages#review'
   get 'kuhnya',       to: 'guest_pages#kitchen'
@@ -40,15 +39,6 @@ Myapp::Application.routes.draw do
   get 'download',     to: 'guest_pages#download_menu'
   get "sitemap",      to: 'guest_pages#site_map'
   get "sitemap.xml",  to: 'guest_pages#site_map', format: :xml, as: :sitemap
-=======
-  get 'WhitePark', to: 'guest_pages#main'
-  get 'otzivi',    to: 'guest_pages#review'
-  get 'kuhnya',    to: 'guest_pages#kitchen'
-  get 'statii',    to: 'guest_pages#list_of_articles'
-  get 'o_nas',     to: 'guest_pages#about_us'
-  get 'map',       to: 'guest_pages#map_park'
-  get 'sobitia',   to: 'guest_pages#eventlist'
->>>>>>> 7d770c6636af9284f3f661edf882248e30c3de8d
 
   # get '/moderators/sign_in', to: 'admin/pages#login_white_park'
 
