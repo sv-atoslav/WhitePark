@@ -13,6 +13,19 @@ sitemap :site do
 	url kontakti_path
 	url karta_path
 end
+sitemap_for Event.all, do |state|
+	ssilka  = "events/"
+	ssilka += state.id.to_s
+	ssilka += "/prosmotr"
+	url ssilka
+	# url "events/"+state.id.to_s+"/prosmotr"
+end
+sitemap_for CategoryEvent.all, do |state|
+	url "category_events/"+state.id.to_s+"/prosmotr"
+end
+sitemap_for Article.all, do |state|
+	url "articles/"+state.id.to_s+"/prosmotr"
+end
 
 # You can have multiple sitemaps like the above – just make sure their names are different.
 
