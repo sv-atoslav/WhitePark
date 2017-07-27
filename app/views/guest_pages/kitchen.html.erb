@@ -5,17 +5,19 @@
 </div></div>
 <!-- START Most Warning Part -->
 <% if @visible_part %><div class="dishes-block">
-	<div align="center"><small>должен отобразиться блок</small></div>
 	<div class="dishes-block-points block"></div>
-	<div class="owl-carousel"><% @kitchen_photo_list.each do |dishe| %><div class="big-block">
-		<div class="background"><%= image_tag(Photo.find(dishe.photo).title) %></div>
-		<div class="block"><div class="spec-block spec-block-right">
-			<hr class = "spec-hr"/>
-			<p>Наши блюда готовят профессионалы</p>
-		</div></div>
-	</div><% end %></div>
-	<div class="arrows arrow-left" ><%= image_tag("arrow-brown.png" , alt:"<<")%></div>
-	<div class="arrows arrow-right"><%= image_tag("arrow-brown.png" , alt:">>")%></div>
+	<div class="owl-carousel owl-kit">
+		<% @kitchen_photo_list.each do |one_photo_in_sl| %><div class="big-block">
+			<div class="background"><%= image_tag(Photo.find(one_photo_in_sl.photo).title) %></div>
+			<div class="block"><div class="spec-block spec-block-right">
+				<h2><%= one_photo_in_sl.description %></h2>
+				<hr class = "spec-hr"/>
+				<p>Гордостью WhitePark при проведении частных мероприятий является высококлассный кейтеринг. Здесь гениальные повара под руководством своего уникального шефа создают настоящие шедевры кулинарного искусства.</p>
+			</div></div>
+		</div><% end %>
+	</div>
+	<div class="arrows arrow-left"><% image_tag "arrow-left.png" %></div>
+	<div class="arrows arrow-right"><% image_tag "arrow-left.png" %></div>
 </div><% end %>
 <!-- END Most Warning Part -->
 <div class="chef-block big-block"><div class="block">
@@ -31,3 +33,47 @@
 		<%= link_to "скачать банкетное меню", action: "download_menu", class: "nice-button" %>
 	</div>
 </div></div>
+
+<script>
+	$(document).ready(function(){
+		var owl = $('.dishes-block .owl-carousel').owlCarousel({
+		    loop:false,
+		    margin:0,
+		    nav:false,
+		    items:1,
+		    dots:false
+
+		})
+		$('.arrow-left').click(function() {
+		    owl.trigger('prev.owl.carousel');
+		    SetActive();
+		})
+		$('.arrow-right').click(function() {
+		    owl.trigger('next.owl.carousel');
+		    SetActive();
+		})
+		$(".dishes-block h2").each(function(index) {
+			var point="point";
+			if(index==0){
+				point=point+" active";
+			}
+			$( ".dishes-block-points " ).append( '<div class="'+point+'" id="'+index +'">'+$(this).text()+"</div>" );
+			});
+		$("body").on("click",".point",function(){
+			owl.trigger('to.owl.carousel', $(this).attr("id"));
+			$(".point").removeClass("active");
+			$(this).addClass("active") ;
+		})
+		owl.on('changed.owl.carousel', function() {
+			SetActive();
+		});
+	});
+	function SetActive(){
+		var currentIndex = $('div.owl-carousel .active').index() ;
+		$(".point").removeClass("active");
+		$("#"+currentIndex+'.point').addClass("active") ;
+		var currentIndex = $('div.owl-carousel .active').index() ;
+		$(".point").removeClass("active");
+		$("#"+currentIndex+'.point').addClass("active") ;
+	}
+</script>

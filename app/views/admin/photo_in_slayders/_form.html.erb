@@ -14,5 +14,7 @@
     <%= form.radio_button(:photo, one_photo.id) %>
     <%= form.label(:photo, one_photo.title) %><br>
   <% end %></div>
+  <p>Descprition</p>
+  <div class="field"><%= form.label :description %><%= form.text_area :description %></div>
   <div class="actions"><%= form.submit %></div>
 <% end %>

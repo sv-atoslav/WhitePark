@@ -14,7 +14,7 @@ class GuestPagesController < ApplicationController
 	def main
 		@main_slayder = Slayder.find_by(title: "главная")
 		if !@main_slayder.nil?
-			@main_photo_list = PhotoInSlayder.where(slyder: @main_slayder.id)
+			@main_photo_list = PhotoInSlayder.where(slyder: @main_slayder.id).to_a
 		end
 		@category_list = CategoryEvent.all
 		exist_list(@category_list)
@@ -24,7 +24,7 @@ class GuestPagesController < ApplicationController
 		@kitchen_slayder = Slayder.find_by(title: "кухня")
 		@visible_part = !(@kitchen_slayder.nil?)
 		if @visible_part
-			@kitchen_photo_list = PhotoInSlayder.where(slyder: @kitchen_slayder.id)
+			@kitchen_photo_list = PhotoInSlayder.where(slyder: @kitchen_slayder.id).to_a
 			exist_list(@kitchen_photo_list)
 		end
 	end
@@ -56,6 +56,6 @@ class GuestPagesController < ApplicationController
 	private
 
 	def exist_list(list)
-		@visible_part = (list.count > 0)
+		@visible_part = (list.any?)
 	end
 end

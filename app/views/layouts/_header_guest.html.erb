@@ -1,5 +1,5 @@
 <!-- START SCRIPT -->	
-	<%= javascript_include_tag "jquery/jquery-2.2.3.min", "jquery/jquery-ui.min", "jquery/jquery-ui.multidatespicker", "jquery/jquery.maskedinput.min", "owl.carousel.min"%>
+	<%= javascript_include_tag "jquery/jquery-2.2.3.min", "jquery/jquery-ui.min", "jquery/jquery-ui.multidatespicker", "jquery/jquery.maskedinput.min", "owl.carousel.min" %>
 	<script>
 		$(document).ready(function() {
 			var date=$(".spec-calendar").multiDatesPicker({
@@ -15,7 +15,7 @@
 	</script>
 	<script>
 		$(document).ready(function(){
-			var owl = $('.calendar-block .background').owlCarousel({
+			var owl = $('.calendar-block .background, .owl-kit').owlCarousel({
 				loop:false,
 				margin:0,
 				nav:false,

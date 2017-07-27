@@ -3,6 +3,18 @@
 host "localhost:3000"
 
 sitemap :site do
+	word = "category_events/"
+	CategoryEvent.all.each do |state|
+		url word+state.id.to_s+"/prosmotr"
+	end
+	word = "events/"
+	Event.all.each do |state|
+		url word+state.id.to_s+"/prosmotr"
+	end
+	word = "articles/"
+	Article.all.each do |state|
+		url word+state.id.to_s+"/prosmotr"
+	end
 	url "/WhitePark"
 	url otzivi_path
 	url kuhnya_path
@@ -11,21 +23,20 @@ sitemap :site do
 	url map_path
 	url sobitia_path
 	url kontakti_path
-	url karta_path
+	url sitemap_path
 end
-sitemap_for Event.all, do |state|
-	ssilka  = "events/"
-	ssilka += state.id.to_s
-	ssilka += "/prosmotr"
-	url ssilka
-	# url "events/"+state.id.to_s+"/prosmotr"
-end
-sitemap_for CategoryEvent.all, do |state|
-	url "category_events/"+state.id.to_s+"/prosmotr"
-end
-sitemap_for Article.all, do |state|
-	url "articles/"+state.id.to_s+"/prosmotr"
-end
+# word = "events/"
+# sitemap_for Event.all do |state|
+# 	url word+state.id.to_s+"/prosmotr"
+# end
+# word = "category_events/"
+# sitemap_for CategoryEvent.all do |state|
+# 	url word+state.id.to_s+"/prosmotr"
+# end
+# word = "articles/"
+# sitemap_for Article.all do |state|
+# 	url word+state.id.to_s+"/prosmotr"
+# end
 
 # You can have multiple sitemaps like the above – just make sure their names are different.
 

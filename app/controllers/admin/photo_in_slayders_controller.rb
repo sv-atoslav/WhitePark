@@ -5,7 +5,7 @@ class Admin::PhotoInSlaydersController < ApplicationController
   # GET /photo_in_slayders
   # GET /photo_in_slayders.json
   def index
-    @photo_in_slayders = PhotoInSlayder.all.order(updated_at: :desc)
+    @list_of_slayders = Slayder.all
   end
 
   # GET /photo_in_slayders/1
@@ -70,6 +70,6 @@ class Admin::PhotoInSlaydersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_in_slayder_params
-      params.require(:photo_in_slayder).permit(:photo, :slyder)
+      params.require(:photo_in_slayder).permit(:photo, :slyder, :description)
     end
 end

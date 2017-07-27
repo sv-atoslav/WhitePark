@@ -12,6 +12,8 @@ Myapp::Application.routes.draw do
   
   # You can have the root of your site routed with "root"
   root to: 'guest_pages#main'
+  get 'robots.:format' => 'application#robots', format: :text
+  get 'robots' => 'application#robots', format: :text
 
   # get '/admin', to: 'admin/dashboards#dashboard_1'
   get  "/admin",  to: "admin/dashboards#dashboard_white_park"
@@ -37,8 +39,8 @@ Myapp::Application.routes.draw do
   get 'sobitia',      to: 'guest_pages#eventlist'
   get 'kontakti',     to: 'guest_pages#contacts'
   get 'download',     to: 'guest_pages#download_menu'
-  get "sitemap_to_site",      to: 'guest_pages#site_map'
-  get "sitemap_to_site.xml",  to: 'guest_pages#site_map', format: :xml, as: :sitemap
+  get "sitemap",      to: 'guest_pages#site_map'
+  # get "sitemap.xml",  to: 'guest_pages#site_map', format: :xml, as: :sitemap
 
   # get '/moderators/sign_in', to: 'admin/pages#login_white_park'
 
