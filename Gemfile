@@ -46,6 +46,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # for delete
 gem 'rails-ujs'
 
