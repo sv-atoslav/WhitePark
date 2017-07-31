@@ -1,3 +1,5 @@
+@import "base/variables";
+
 #small-chat {
   position: fixed;
   bottom: 20px;
@@ -71,14 +73,13 @@
 
   .content {
     padding: 15px 15px;
-
     .author-name {
       font-weight: bold;
       margin-bottom: 3px;
       font-size: 11px;
     }
 
-    > div {
+    div {
       padding-bottom: 20px;
     }
 
@@ -100,7 +101,6 @@
     .left {
       text-align: left;
       clear: both;
-
       .chat-message {
         float: left;
       }
@@ -109,17 +109,13 @@
     .right {
       text-align: right;
       clear: both;
-
       .chat-message {
         float: right;
       }
-
     }
-
   }
 
   .form-chat {
     padding: 10px 10px;
   }
-
 }

@@ -1,0 +1,50 @@
+/* line 7, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eeeeee;
+}
+/* line 14, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron h1,
+.jumbotron .h1 {
+  color: inherit;
+}
+/* line 19, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
+/* line 25, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron > hr {
+  border-top-color: #d5d5d5;
+}
+/* line 29, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+.container .jumbotron, .container-fluid .jumbotron {
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 36, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+.jumbotron .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  /* line 7, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+  .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  /* line 44, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+  .container .jumbotron, .container-fluid .jumbotron {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  /* line 50, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_jumbotron.scss */
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 63px;
+  }
+}

@@ -1,0 +1,116 @@
+/* line 8, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-size: 12px;
+  opacity: 0;
+}
+/* line 18, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.in {
+  opacity: 0.9;
+}
+/* line 19, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+/* line 20, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+/* line 21, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+/* line 22, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+
+/* line 26, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+/* line 36, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 45, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+/* line 52, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+/* line 59, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000;
+}
+/* line 66, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000;
+}
+/* line 73, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000;
+}
+/* line 80, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+/* line 87, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}
+/* line 94, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_tooltip.scss */
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000;
+}

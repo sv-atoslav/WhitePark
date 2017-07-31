@@ -1,0 +1,59 @@
+/* line 10, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+/* line 17, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+/* line 24, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert .alert-link {
+  font-weight: bold;
+}
+/* line 29, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+/* line 34, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert > p + p {
+  margin-top: 5px;
+}
+
+/* line 43, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+}
+/* line 48, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+
+/* line 60, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-success {
+  alert-variant: #dff0d8, #d6e9c6, #3c763d;
+}
+
+/* line 64, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-info {
+  alert-variant: #d9edf7, #bce8f1, #31708f;
+}
+
+/* line 68, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-warning {
+  alert-variant: #fcf8e3, #faebcc, #8a6d3b;
+}
+
+/* line 72, /var/lib/gems/2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-danger {
+  alert-variant: #f2dede, #ebccd1, #a94442;
+}

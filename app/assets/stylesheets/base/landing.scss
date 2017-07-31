@@ -1,11 +1,12 @@
-/*
- *
- *   INSPINIA Landing Page - Responsive Admin Theme
- *   Copyright 2014 Webapplayers.com
- *
-*/
+/* INSPINIA Landing Page - Responsive Admin Theme
+ * Copyright 2014 Webapplayers.com
+ */
+
 /* GLOBAL STYLES
--------------------------------------------------- */
+-------------------------------------------------- 
+*/
+
+@import "base/variables";
 
 /* PACE PLUGIN
 -------------------------------------------------- */
@@ -35,7 +36,9 @@ body.landing-page {
 
 .landing-page {
 
-  .container{overflow:hidden;}
+  .container{
+    overflow:hidden;
+  }
 
   span.navy {
     color: $navy;

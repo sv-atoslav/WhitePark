@@ -17,7 +17,7 @@ class GuestPagesController < ApplicationController
 			@main_photo_list = PhotoInSlayder.where(slyder: @main_slayder.id).to_a
 		end
 		@category_list = CategoryEvent.all
-		exist_list(@category_list)
+		exist_list(@main_photo_list)
 	end
 
 	def kitchen
@@ -56,6 +56,6 @@ class GuestPagesController < ApplicationController
 	private
 
 	def exist_list(list)
-		@visible_part = (list.any?)
+		@visible_part = (list.to_a.any?)
 	end
 end

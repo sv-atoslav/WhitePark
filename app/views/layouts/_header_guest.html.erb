@@ -8,33 +8,42 @@
 				'Октябрь', 'Ноябрь', 'Декабрь'],
 				dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
 				firstDay: 1,
-				nextText: '<%= image_tag "arrow-black.png", alt:"left" %>',
-				prevText: '<%= image_tag "arrow-black.png", alt:"rigth" %>'
-				});
+				nextText: '<%= image_tag "arrow-black.png", alt:"left"  %>',
+				prevText: '<%= image_tag "arrow-black.png", alt:"right" %>'
 			});
+		});
 	</script>
 	<script>
 		$(document).ready(function(){
 			var owl = $('.calendar-block .background, .owl-kit').owlCarousel({
-				loop:false,
-				margin:0,
-				nav:false,
-				items:1,
-				dots:false
+				loop: 	false,
+				margin: 0,
+				nav: 	false,
+				items:  1,
+				dots: 	false
 			})
-		$('.arrow-left').click(function() {
-			owl.trigger('prev.owl.carousel');
-		})
-		$('.arrow-right').click(function() {
-			owl.trigger('next.owl.carousel');
-		})
+			$('.arrow-left').click(function() {
+				owl.trigger('prev.owl.carousel');
+			})
+			$('.arrow-right').click(function() {
+				owl.trigger('next.owl.carousel');
+			})
 		});
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjlH02MSgohjleO76RRhKYE0fr7SwtlRk&callback=initMap"></script>
 	<script>
 		var map;
 		function initMap() {
-			var styles =[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+			var styles =[
+				{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},
+				{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},
+				{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},
+				{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},
+				{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},
+				{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
+				{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},
+				{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}
+			]
 			var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
 			var myLatLng = {lat: 55.797360, lng: 37.367081};
 			if($(window).width()<600){
@@ -66,8 +75,7 @@
 				// The anchor for this image is the base of the flagpole at (0, 32).
 				anchor: new google.maps.Point(0, 56),
 				scaledSize: new google.maps.Size(40, 56)
-
-				};
+			};
 			var marker = new google.maps.Marker({
 				position: myLatLng,
 				map: map,
@@ -241,12 +249,12 @@
 </div>
 <div class="header big-block"><div class="block">
 	<div class="social">
-		<a href=""><%= image_tag "insta.png",	alt: "instagram" %></a>
-		<a href=""><%= image_tag "facebook.png",alt: "facebook" %></a>
-		<a href=""><%= image_tag "twitter.png", alt: "twitter" %></a>
-		<a href=""><%= image_tag "vk.png",		alt: "vk.com" %></a>
+		<a href=""><%= image_tag "facebook.png",   alt:"facebook"  %></a>
+		<a href=""><%= image_tag "twitter.png",   alt:"twitter"   %></a>
+		<a href=""><%= image_tag "insta.png",   alt:"instagram"  %></a>
+		<a href=""><%= image_tag "vk.png",      alt:"vk.com"    %></a>
 	</div>
-	<a class="logo" href="/WhitePark"><%= image_tag "logo.png" , alt:"WhitePark" %></a>
+	<a class="logo" href="/WhitePark"><img src="assets/wpimg/logo.png" alt="WhitePark"></a>
 	<div class="contacts-header">
 		<p class="address">г. Москва, Мякининское ш., д.3<br>(Рублевский пляж)</p>
 		<a href="" class="tel">+ 7 (985) 777-4-555</a>

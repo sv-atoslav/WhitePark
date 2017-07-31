@@ -1,4 +1,4 @@
-<div class="big-block calendar-block">
+<% if @visible_part %><div class="big-block calendar-block">
 	<div class="background owl-carousel"><% @main_photo_list.to_a.each do |one_phot_in_sl| %>
 		<%= image_tag(Photo.find(one_phot_in_sl.photo).title) %>
 	<% end %></div>
@@ -12,8 +12,8 @@
 		<div class="spec-calendar"></div>
 		<a class="nice-button call-pop" href="javascript:void(0);">проверить</a>
 	</div></div>
-</div>
-<% if @visible_part %><div class="photoreports-block  big-block"><div class="block">
+</div><% end %>
+<div class="photoreports-block  big-block"><div class="block">
 	<h2>Направления</h2>
 	<hr class="spec-hr">
 	<div class="photoreports"><% @category_list.each do |one_category|%><a href="//localhost:3000/category_events/<%= one_category.id.to_s %><%= @word_to_see %>" class="album">
@@ -25,4 +25,4 @@
 			<h4>подробнее</h4>
 		</div>
 	</a><% end %></div>
-</div></div><% end %>
+</div></div>

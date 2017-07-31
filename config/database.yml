@@ -3,6 +3,7 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
+
 development:
   database: wp_development
   encoding: unicode
@@ -24,3 +25,4 @@ production:
   adapter:  postgresql
   timeout:  5000
   pool:     5
+  encoding: unicode
