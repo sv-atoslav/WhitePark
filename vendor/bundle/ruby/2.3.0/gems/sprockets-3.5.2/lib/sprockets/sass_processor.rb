@@ -275,7 +275,7 @@ module Sprockets
         #
         # Returns a Context instance.
         def sprockets_context
-          options[:sprockets][:context]
+            options[:sprockets][:context]
         end
 
     end

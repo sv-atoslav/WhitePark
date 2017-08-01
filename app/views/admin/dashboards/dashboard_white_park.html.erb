@@ -1,6 +1,6 @@
 <div class="wrapper wrapper-content">
     <div>
-    <%= form_tag('#') %>
+        <%= form_tag('#') %>
         <div class="field">
             <%= label_tag(:new_email, "email")%>
             <br><%= email_field_tag :new_email, current_moderator.email, autofocus: true %>
@@ -8,23 +8,32 @@
         <div class="actions"><%= submit_tag "сменить пароль" %></div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-lg-3"><div class="ibox float-e-margins">
-            <div class="ibox-title"><h5>Фотогалерея</h5></div>
+    <table width="100%" cellspacing="5px" valign="top"><body><tr>
+        <td width="33%"><div class="ibox float-e-margins" float="left">
+            <div class="ibox-title">
+                <h5>Фотогалерея</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    <a class="close-link"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
             <div class="ibox-content">
                 <h1 class="no-margins"><%= Photo.count %></h1>
                 <small>Фотографий всего</small>
-                <% nphwd = Photo.where(description: "").count %>
-                <!-- number photo without description -->
-                <% if nphwd > 0 %>
-                    <hr>
-                    <h1 class="no-margins"><%= nphwd %></h1>
-                    <small>без описания</small>
-                <% end %>
+                <hr>
+                <h1 class="no-margins"><%= Photo.where(description: "").count %></h1>
+                <small>без описания</small>
             </div>
-        </div></div>
-        <div class="col-lg-3"><div class="ibox float-e-margins">
-            <div class="ibox-title"><h5>Content</h5></div>
+        </div></td>
+        <td width="5px"></td>
+        <td width="33%"><div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Content</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    <a class="close-link"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
             <div class="ibox-content">
                 <h1 class="no-margins"><%= Article.count %></h1>
                 <small>статей</small>
@@ -32,9 +41,16 @@
                 <h1 class="no-margins"><%= Event.count %></h1>
                 <small>опубликованых событий в <%= CategoryEvent.count %> категориях</small>
             </div>
-        </div></div>
-        <div class="col-lg-3"><div class="ibox float-e-margins">
-            <div class="ibox-title"><h5>User activity</h5></div>
+        </div></td>
+        <td width="5px"></td>
+        <td width="33%"><div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>User activity</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    <a class="close-link"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
             <div class="ibox-content">
                 <h1 class="no-margins"><%= User.count %></h1>
                 <small>клиентов получают рассылку</small>
@@ -42,10 +58,10 @@
                 <h1 class="no-margins"><%= Opinion.count %></h1>
                 <small>отзывов на сайте</small>
             </div>
-        </div></div>
-    </div>
-    <div class="row">
-        <div class="col-lg-4"><div class="ibox float-e-margins">
+        </div></td>
+    </tr></body></table>
+    <table width="100%" cellspacing="5px" valign="top"><body><tr>
+        <td width="49%"><div class="ibox float-e-margins">
             <div class="ibox-title">
                 <h5>Мнения</h5>
                 <div class="ibox-tools">
@@ -55,7 +71,7 @@
             </div>
             <div class="ibox-content ibox-heading">
                 <h3><i class="fa fa-envelope-o"></i>Новые мнения</h3>
-                <small><i class="fa fa-tim"></i>У вас <%= NotPublishedOpinion.count %> немодерированых отзывов.</small>
+                <small><i class="fa fa-tim"></i>У вас <%= NotPublishedOpinion.count %> немодерированых мнений.</small>
             </div>
             <div class="ibox-content"><div class="feed-activity-list"><% NotPublishedOpinion.all.each do |one_impression| %>
                 <div class="feed-element"><div>
@@ -64,9 +80,9 @@
                     <small class="text-muted"><%= one_impression.visit %></small>
                 </div></div>
             <% end %></div></div>
-        </div></div>
-        <div class="col-lg-8"><div class="row">
-                <div class="col-lg-6"><div class="ibox float-e-margins">
+        </div></td>
+        <td width="1px"></td>
+        <td width="49%"><div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>Small todo list</h5>
                         <div class="ibox-tools">
@@ -104,9 +120,8 @@
                             <span class="m-l-xs">Call to Anna for dinner</span>
                         </li>
                     </ul></div>
-                </div></div>
-        </div></div>
-    </div>
+        </div></td>
+    </tr></body></table>
 </div>
 
 <% content_for :javascript do %>
