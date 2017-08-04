@@ -2,19 +2,11 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
-gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
-# what I install {
-gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
 gem 'dynamic_sitemaps'
-
-#}
-
-# gem 'summernote-rails'
-# gem 'simple_form'
-# gem 'jquery-turbolinks'
+gem 'will_paginate', '~> 3.1.0'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
@@ -24,7 +16,7 @@ gem 'dynamic_sitemaps'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails', '>= 3.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
@@ -64,3 +56,5 @@ gem 'rails-ujs'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ruby '2.4.1'

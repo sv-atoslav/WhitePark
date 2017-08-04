@@ -1,0 +1,60 @@
+{:uriI"file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/pig/index.html?type=text/html&id=65f8faea456552c0fba92b0bf3b5592d8b6c136dffd76b3b367a0db4da3fbd85:ET:load_pathI"vendor/assets/javascripts;T:filenameI"=vendor/assets/javascripts/codemirror/mode/pig/index.html;T:	nameI"codemirror/mode/pig/index;T:logical_pathI"#codemirror/mode/pig/index.html;T:content_typeI"text/html;T:sourceI"É<!doctype html>
+
+<title>CodeMirror: Pig Latin mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="pig.js"></script>
+<style>.CodeMirror {border: 2px inset #dee;}</style>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">Pig Latin</a>
+  </ul>
+</div>
+
+<article>
+<h2>Pig Latin mode</h2>
+<form><textarea id="code" name="code">
+-- Apache Pig (Pig Latin Language) Demo
+/* 
+This is a multiline comment.
+*/
+a = LOAD "\path\to\input" USING PigStorage('\t') AS (x:long, y:chararray, z:bytearray);
+b = GROUP a BY (x,y,3+4);
+c = FOREACH b GENERATE flatten(group) as (x,y), SUM(group.$2) as z;
+STORE c INTO "\path\to\output";
+
+--
+</textarea></form>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        indentUnit: 4,
+        mode: "text/x-pig"
+      });
+    </script>
+
+    <p>
+        Simple mode that handles Pig Latin language.
+    </p>
+
+    <p><strong>MIME type defined:</strong> <code>text/x-pig</code>
+    (PIG code)
+</html>
+</article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"ºfile-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/pig/index.html;TTF:charsetI"
+utf-8;F:digest"%vxÂÿ…¾+~”‹ñNVkÜH<I]¶2¾cñîŸ)N:lengthiÉ:dependencies_digest"%ûW9ç™÷>=Ž¸ö¼÷qÌe±ôæî”³×:ÀR›:idI"E65f8faea456552c0fba92b0bf3b5592d8b6c136dffd76b3b367a0db4da3fbd85;F:
+mtimel+åÅhY

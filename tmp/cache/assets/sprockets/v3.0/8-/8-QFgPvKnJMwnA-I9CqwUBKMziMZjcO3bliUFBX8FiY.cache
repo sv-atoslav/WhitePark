@@ -1,0 +1,73 @@
+{:uriI"file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/smalltalk/index.html?type=text/html&id=75a53ce3ce9f64e85f4820533658380968e8e58a822e4300279cdbef086080ed:ET:load_pathI"vendor/assets/javascripts;T:filenameI"Cvendor/assets/javascripts/codemirror/mode/smalltalk/index.html;T:	nameI"$codemirror/mode/smalltalk/index;T:logical_pathI")codemirror/mode/smalltalk/index.html;T:content_typeI"text/html;T:sourceI"p<!doctype html>
+
+<title>CodeMirror: Smalltalk mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="../../addon/edit/matchbrackets.js"></script>
+<script src="smalltalk.js"></script>
+<style>
+      .CodeMirror {border: 2px solid #dee; border-right-width: 10px;}
+      .CodeMirror-gutter {border: none; background: #dee;}
+      .CodeMirror-gutter pre {color: white; font-weight: bold;}
+    </style>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">Smalltalk</a>
+  </ul>
+</div>
+
+<article>
+<h2>Smalltalk mode</h2>
+<form><textarea id="code" name="code">
+" 
+    This is a test of the Smalltalk code
+"
+Seaside.WAComponent subclass: #MyCounter [
+    | count |
+    MyCounter class &gt;&gt; canBeRoot [ ^true ]
+
+    initialize [
+        super initialize.
+        count := 0.
+    ]
+    states [ ^{ self } ]
+    renderContentOn: html [
+        html heading: count.
+        html anchor callback: [ count := count + 1 ]; with: '++'.
+        html space.
+        html anchor callback: [ count := count - 1 ]; with: '--'.
+    ]
+]
+
+MyCounter registerAsApplication: 'mycounter'
+</textarea></form>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "text/x-stsrc",
+        indentUnit: 4
+      });
+    </script>
+
+    <p>Simple Smalltalk mode.</p>
+
+    <p><strong>MIME types defined:</strong> <code>text/x-stsrc</code>.</p>
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"¿file-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/smalltalk/index.html;TTF:charsetI"
+utf-8;F:digest"%u´Ú≤OeW§,£ÿ«kîa|mË√;-°'‚v]:lengthip:dependencies_digest"%aÀ˘$Òî¯øÌ»%Ô}ÁVÅt<-,}¶M—ÂÉxö«ål:idI"E75a53ce3ce9f64e85f4820533658380968e8e58a822e4300279cdbef086080ed;F:
+mtimel+Â≈hY
