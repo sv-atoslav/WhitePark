@@ -1,2 +1,2 @@
-//= require blueimp/jquery.blueimp-gallery.min.js
-//= require slick/slick.min.js
+//= require jquery/jquery.blueimp-gallery.min.js
+//= require slick.min.js

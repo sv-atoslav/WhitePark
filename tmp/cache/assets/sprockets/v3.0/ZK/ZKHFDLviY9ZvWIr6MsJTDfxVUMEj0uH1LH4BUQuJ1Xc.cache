@@ -1,0 +1,48 @@
+{:uriI"file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/diff_match_patch/README.txt?type=text/plain&id=04a89c1c2c9f2ad70c8d458bcecc9fe90c7fedcb1943e26639d7f7e01a7a7a9e:ET:load_pathI"vendor/assets/javascripts;T:filenameI":vendor/assets/javascripts/diff_match_patch/README.txt;T:	nameI"diff_match_patch/README;T:logical_pathI" diff_match_patch/README.txt;T:content_typeI"text/plain;T:sourceI"Diff, Match and Patch Library
+http://code.google.com/p/google-diff-match-patch/
+Neil Fraser
+
+This library is currently available in seven different ports, all using the same API.
+Every version includes a full set of unit tests.
+
+C++:
+* Ported by Mike Slemmer.
+* Currently requires the Qt library.
+
+C#:
+* Ported by Matthaeus G. Chajdas.
+
+Dart:
+* The Dart language is still growing and evolving, so this port is only as
+  stable as the underlying language.
+
+Java:
+* Included is both the source and a Maven package.
+
+JavaScript:
+* diff_match_patch_uncompressed.js is the human-readable version.
+  Users of node.js should 'require' this uncompressed version since the
+  compressed version is not guaranteed to work outside of a web browser.
+* diff_match_patch.js has been compressed using Google's internal JavaScript compressor.
+  Non-Google hackers who wish to recompress the source can use:
+  http://dean.edwards.name/packer/
+
+Lua:
+* Ported by Duncan Cross.
+* Does not support line-mode speedup.
+
+Objective C:
+* Ported by Jan Weiss.
+* Includes speed test (this is a separate bundle for other languages).
+
+Python:
+* Two versions, one for Python 2.x, the other for Python 3.x.
+* Runs 10x faster under PyPy than CPython.
+
+Demos:
+* Separate demos for Diff, Match and Patch in JavaScript.
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"∑file-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/diff_match_patch/README.txt;TTF:charsetI"
+utf-8;F:digest"%=Í˙ªﬁY…˙≠¸⁄mR7.ÇQ·ÔôÖgLa{5Ò¨8:lengthi:dependencies_digest"%ò€ì‰ç¶È/≈`ëG9çUπèX¡;+ôøãa›7<é’¸:idI"E04a89c1c2c9f2ad70c8d458bcecc9fe90c7fedcb1943e26639d7f7e01a7a7a9e;F:
+mtimel+Â≈hY

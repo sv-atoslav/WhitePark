@@ -1,0 +1,77 @@
+{:uriI"file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/apl/index.html?type=text/html&id=a897c3e659ab37e1795beffcb98a861568ac47b2ba907c80b272b63a630825f0:ET:load_pathI"vendor/assets/javascripts;T:filenameI"=vendor/assets/javascripts/codemirror/mode/apl/index.html;T:	nameI"codemirror/mode/apl/index;T:logical_pathI"#codemirror/mode/apl/index.html;T:content_typeI"text/html;T:sourceI"ƒ<!doctype html>
+
+<title>CodeMirror: APL mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="../../addon/edit/matchbrackets.js"></script>
+<script src="./apl.js"></script>
+<style>
+	.CodeMirror { border: 2px inset #dee; }
+    </style>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">APL</a>
+  </ul>
+</div>
+
+<article>
+<h2>APL mode</h2>
+<form><textarea id="code" name="code">
+â Conway's game of life
+
+â This example was inspired by the impressive demo at
+â http://www.youtube.com/watch?v=a9xAKttWgP4
+
+â Create a matrix:
+â     0 1 1
+â     1 1 0
+â     0 1 0
+creature â† (3 3 â´ â³ 9) âˆˆ 1 2 3 4 7   â Original creature from demo
+creature â† (3 3 â´ â³ 9) âˆˆ 1 3 6 7 8   â Glider
+
+â Place the creature on a larger board, near the centre
+board â† Â¯1 âŠ– Â¯2 âŒ½ 5 7 â†‘ creature
+
+â A function to move from one generation to the next
+life â† {âˆ¨/ 1 âµ âˆ§ 3 4 = âŠ‚+/ +âŒ¿ 1 0 Â¯1 âˆ˜.âŠ– 1 0 Â¯1 âŒ½Â¨ âŠ‚âµ}
+
+â Compute n-th generation and format it as a
+â character matrix
+gen â† {' #'[(life â£ âµ) board]}
+
+â Show first three generations
+(gen 1) (gen 2) (gen 3)
+</textarea></form>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "text/apl"
+      });
+    </script>
+
+    <p>Simple mode that tries to handle APL as well as it can.</p>
+    <p>It attempts to label functions/operators based upon
+    monadic/dyadic usage (but this is far from fully fleshed out).
+    This means there are meaningful classnames so hover states can
+    have popups etc.</p>
+
+    <p><strong>MIME types defined:</strong> <code>text/apl</code> (APL code)</p>
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"ºfile-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/apl/index.html;TTF:charsetI"
+utf-8;F:digest"%è+%DMi¿Ô}¢ø8mØÏÈ3a,ÃşRv+)<şÄ-:lengthiƒ:dependencies_digest"%_Q1°~©¦¼*^ÇX_¿¥Ø·M×÷åG_¡Ïı…:idI"Ea897c3e659ab37e1795beffcb98a861568ac47b2ba907c80b272b63a630825f0;F:
+mtimel+åÅhY

@@ -1,2 +1,2 @@
-//= require footable/footable.all.min.js
-//= require slick/slick.min.js
+//= require footable.all.min.js
+//= require slick.min.js

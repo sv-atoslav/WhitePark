@@ -2,14 +2,11 @@
  * Copyright 2014 Webapplayers.com
  */
 
-/* GLOBAL STYLES
--------------------------------------------------- 
-*/
+/* GLOBAL STYLES */
 
 @import "base/variables";
 
-/* PACE PLUGIN
--------------------------------------------------- */
+/* PACE PLUGIN */
 .landing-page.pace .pace-progress {
   background: #fff;
   position: fixed;
@@ -27,7 +24,6 @@
 .pace-inactive {
   display: none;
 }
-
 body.landing-page {
   color: $text-color;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
@@ -71,8 +67,7 @@ body.landing-page {
     margin: 60px auto 0;
     border-bottom: 2px solid $navy;
   }
-  /* CUSTOMIZE THE NAVBAR
-  -------------------------------------------------- */
+  /* CUSTOMIZE THE NAVBAR */
   .navbar-wrapper {
     position: fixed;
     top: 0;
@@ -197,21 +192,19 @@ body.landing-page {
     padding: 10px;
     height: auto;
   }
-  /* BACKGROUNDS SLIDER
-  -------------------------------------------------- */
+  /* BACKGROUNDS SLIDER */
   .header-back {
     height: 470px;
     width: 100%;
   }
   .header-back.one {
-    background: image-url("landing/header_one.jpg")  50% 0 no-repeat;
+    background: url("landing/header_one.jpg")  50% 0 no-repeat;
   }
   .header-back.two {
-    background: image-url("landing/header_two.jpg") 50% 0 no-repeat;
+    background: url("landing/header_two.jpg") 50% 0 no-repeat;
   }
-  /* CUSTOMIZE THE CAROUSEL
-  -------------------------------------------------- */
-  /* Carousel base class */
+   /* CUSTOMIZE THE CAROUSEL  */
+  /*  Carousel base class    */
   .carousel {
     height: 470px;
   }
@@ -416,7 +409,7 @@ body.landing-page {
     padding-top: 80px;
     padding-bottom: 90px;
     background-color: $navy;
-    background-image: image-url("landing/avatar_all.png");
+    background-image: url("landing/avatar_all.png");
   }
   .big-icon {
     font-size: 56px !important;
@@ -425,7 +418,7 @@ body.landing-page {
     color: $navy !important;
   }
   .contact {
-    background-image: image-url("landing/word_map.png");
+    background-image: url("landing/word_map.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     margin-top: 60px;
@@ -530,8 +523,7 @@ body.landing-page {
     background-color: #1dc5a3;
     border-color: #1dc5a3;
   }
-  /* RESPONSIVE CSS
-  -------------------------------------------------- */
+  /* RESPONSIVE CSS */
   @media (min-width: 768px) {
     /* Navbar positioning foo */
     .navbar-wrapper {
@@ -645,18 +637,15 @@ body.landing-page {
       margin-top: 120px;
     }
   }
-
   @media (max-width: 768px) {
     .navbar .navbar-header {
       display: block;
       float: none;
     }
-
     .navbar .navbar-header .navbar-toggle {
       background-color: #ffffff;
       padding: 9px 10px;
       border: none;
     }
   }
-
 }

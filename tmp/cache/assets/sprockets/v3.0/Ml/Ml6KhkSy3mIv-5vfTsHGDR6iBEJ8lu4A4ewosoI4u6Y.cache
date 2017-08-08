@@ -1,68 +1,0 @@
-{:uriI"	file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/cypher/index.html?type=text/html&id=fb67baeb0477c3228391b10266553170732c92dc14b7196020eb7dbc893f6964:ET:load_pathI"vendor/assets/javascripts;T:filenameI"@vendor/assets/javascripts/codemirror/mode/cypher/index.html;T:	nameI"!codemirror/mode/cypher/index;T:logical_pathI"&codemirror/mode/cypher/index.html;T:content_typeI"text/html;T:sourceI"t<!doctype html>
-
-<title>CodeMirror: Cypher Mode for CodeMirror</title>
-<meta charset="utf-8"/>
-<link rel=stylesheet href="../../doc/docs.css">
-
-<link rel="stylesheet" href="../../lib/codemirror.css" />
-<link rel="stylesheet" href="../../theme/neo.css" />
-<script src="../../lib/codemirror.js"></script>
-<script src="cypher.js"></script>
-<style>
-.CodeMirror {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-        </style>
-<div id=nav>
-  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
-
-  <ul>
-    <li><a href="../../index.html">Home</a>
-    <li><a href="../../doc/manual.html">Manual</a>
-    <li><a href="https://github.com/codemirror/codemirror">Code</a>
-  </ul>
-  <ul>
-    <li><a href="../index.html">Language modes</a>
-    <li><a class=active href="#">Cypher Mode for CodeMirror</a>
-  </ul>
-</div>
-
-<article>
-<h2>Cypher Mode for CodeMirror</h2>
-<form>
-            <textarea id="code" name="code">// Cypher Mode for CodeMirror, using the neo theme
-MATCH (joe { name: 'Joe' })-[:knows*2..2]-(friend_of_friend)
-WHERE NOT (joe)-[:knows]-(friend_of_friend)
-RETURN friend_of_friend.name, COUNT(*)
-ORDER BY COUNT(*) DESC , friend_of_friend.name
-</textarea>
-            </form>
-            <p><strong>MIME types defined:</strong> 
-            <code><a href="?mime=application/x-cypher-query">application/x-cypher-query</a></code>
-        </p>
-<script>
-window.onload = function() {
-  var mime = 'application/x-cypher-query';
-  // get mime type
-  if (window.location.href.indexOf('mime=') > -1) {
-    mime = window.location.href.substr(window.location.href.indexOf('mime=') + 5);
-  }
-  window.editor = CodeMirror.fromTextArea(document.getElementById('code'), {
-    mode: mime,
-    indentWithTabs: true,
-    smartIndent: true,
-    lineNumbers: true,
-    matchBrackets : true,
-    autofocus: true,
-    theme: 'neo'
-  });
-};
-</script>
-
-</article>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"½file-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/cypher/index.html;TTF:charsetI"
-utf-8;F:digest"%%Y>ŠL~{R?Éb(bZŠ¯É÷û!ItÚå‘O–Ä:lengthit:dependencies_digest"%GØaä¼ª¡)Î³T¢Œ7Ò%Fås±]¥QhÐ´:idI"Efb67baeb0477c3228391b10266553170732c92dc14b7196020eb7dbc893f6964;F:
-mtimel+åÅhY

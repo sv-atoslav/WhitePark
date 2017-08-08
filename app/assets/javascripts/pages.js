@@ -1,1 +1,1 @@
-//= require iCheck/icheck.min.js
+//= require icheck.min.js

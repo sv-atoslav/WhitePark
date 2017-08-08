@@ -1,7 +1,7 @@
-//= require iCheck/icheck.min.js
-//= require jeditable/jquery.jeditable.js
-//= require dataTables/datatables.min.js
-//= require jqGrid/i18n/grid.locale-el.js
-//= require jqGrid/jquery.jqGrid.min.js
-//= require jquery-ui/jquery-ui.min.js
-//= require footable/footable.all.min.js
+//= require icheck.min.js
+//= require jquery/jquery.jeditable.js
+//= require datatables.min.js
+//= require jquery/Grid/i18n/grid.locale-el.js
+//= require jquery/Grid/jquery.Grid.min.js
+//= require jquery/jquery-ui.min.js
+//= require footable.all.min.js

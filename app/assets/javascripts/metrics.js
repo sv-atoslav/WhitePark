@@ -1,1 +1,1 @@
-//= require sparkline/jquery.sparkline.min.js
+//= require jquery/jquery.sparkline.min.js

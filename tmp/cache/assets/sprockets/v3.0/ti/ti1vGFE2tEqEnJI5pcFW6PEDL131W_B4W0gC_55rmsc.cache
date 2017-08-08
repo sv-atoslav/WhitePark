@@ -1,82 +1,0 @@
-{:uriI"	file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/scheme/index.html?type=text/html&id=1fe47af3c6b33d77b74eae6f04745ca4f4a1a76323895bfee46220161dc22606:ET:load_pathI"vendor/assets/javascripts;T:filenameI"@vendor/assets/javascripts/codemirror/mode/scheme/index.html;T:	nameI"!codemirror/mode/scheme/index;T:logical_pathI"&codemirror/mode/scheme/index.html;T:content_typeI"text/html;T:sourceI"ú	<!doctype html>
-
-<title>CodeMirror: Scheme mode</title>
-<meta charset="utf-8"/>
-<link rel=stylesheet href="../../doc/docs.css">
-
-<link rel="stylesheet" href="../../lib/codemirror.css">
-<script src="../../lib/codemirror.js"></script>
-<script src="scheme.js"></script>
-<style>.CodeMirror {background: #f8f8f8;}</style>
-<div id=nav>
-  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
-
-  <ul>
-    <li><a href="../../index.html">Home</a>
-    <li><a href="../../doc/manual.html">Manual</a>
-    <li><a href="https://github.com/codemirror/codemirror">Code</a>
-  </ul>
-  <ul>
-    <li><a href="../index.html">Language modes</a>
-    <li><a class=active href="#">Scheme</a>
-  </ul>
-</div>
-
-<article>
-<h2>Scheme mode</h2>
-<form><textarea id="code" name="code">
-; See if the input starts with a given symbol.
-(define (match-symbol input pattern)
-  (cond ((null? (remain input)) #f)
-	((eqv? (car (remain input)) pattern) (r-cdr input))
-	(else #f)))
-
-; Allow the input to start with one of a list of patterns.
-(define (match-or input pattern)
-  (cond ((null? pattern) #f)
-	((match-pattern input (car pattern)))
-	(else (match-or input (cdr pattern)))))
-
-; Allow a sequence of patterns.
-(define (match-seq input pattern)
-  (if (null? pattern)
-      input
-      (let ((match (match-pattern input (car pattern))))
-	(if match (match-seq match (cdr pattern)) #f))))
-
-; Match with the pattern but no problem if it does not match.
-(define (match-opt input pattern)
-  (let ((match (match-pattern input (car pattern))))
-    (if match match input)))
-
-; Match anything (other than '()), until pattern is found. The rather
-; clumsy form of requiring an ending pattern is needed to decide where
-; the end of the match is. If none is given, this will match the rest
-; of the sentence.
-(define (match-any input pattern)
-  (cond ((null? (remain input)) #f)
-	((null? pattern) (f-cons (remain input) (clear-remain input)))
-	(else
-	 (let ((accum-any (collector)))
-	   (define (match-pattern-any input pattern)
-	     (cond ((null? (remain input)) #f)
-		   (else (accum-any (car (remain input)))
-			 (cond ((match-pattern (r-cdr input) pattern))
-			       (else (match-pattern-any (r-cdr input) pattern))))))
-	   (let ((retval (match-pattern-any input (car pattern))))
-	     (if retval
-		 (f-cons (accum-any) retval)
-		 #f))))))
-</textarea></form>
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {});
-    </script>
-
-    <p><strong>MIME types defined:</strong> <code>text/x-scheme</code>.</p>
-
-  </article>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"½file-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/vendor/assets/javascripts/codemirror/mode/scheme/index.html;TTF:charsetI"
-utf-8;F:digest"%¿çÇ‚°`t¬êØÔñtl<;'`Ï 	PØËÙžu÷:lengthiú	:dependencies_digest"%´3`g¨}UÉÇ2•UóX”Jc"¨?âh´:×â¬äë:idI"E1fe47af3c6b33d77b74eae6f04745ca4f4a1a76323895bfee46220161dc22606;F:
-mtimel+åÅhY

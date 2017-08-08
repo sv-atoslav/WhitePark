@@ -1,1 +1,1 @@
-//= require wow/wow.min.js
+//= require wow.min.js
