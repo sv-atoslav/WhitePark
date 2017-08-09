@@ -98,7 +98,7 @@
 	position:absolute;
 	top:5px;
 	right:3px;
-	background:url(images/gritter.png) no-repeat left top;
+	background:url('images/gritter.png') no-repeat left top;
 	cursor:pointer;
 	width:30px;
 	height:30px;
@@ -129,7 +129,7 @@
 .gritter-light .gritter-bottom,
 .gritter-light .gritter-top,
 .gritter-light .gritter-close {
-    background-image: url(images/gritter-light.png);
+    background-image: url('images/gritter-light.png');
     color: #222;
 }
 .gritter-light .gritter-title {

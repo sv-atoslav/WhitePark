@@ -10,12 +10,12 @@ a,hr{padding:0}a,button,input,select,textarea{margin:0}article,aside,details,fig
  */
 @font-face{
 	font-family:'FontAwesome';
-	src:url("/bitrix/templates/white_park/css/../fonts/fontawesome-webfont.eot?v=4.7.0");
-	src:url("/bitrix/templates/white_park/css/../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format('embedded-opentype'),
-	url("/bitrix/templates/white_park/css/../fonts/fontawesome-webfont.woff2?v=4.7.0") format('woff2'),
-	url("/bitrix/templates/white_park/css/../fonts/fontawesome-webfont.woff?v=4.7.0") format('woff'),
-	url(/bitrix/templates/white_park/css/../fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),
-	url(/bitrix/templates/white_park/css/../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');
+	src:url("fontawesome-webfont.eot?v=4.7.0");
+	src:url("fontawesome-webfont.eot?#iefix&v=4.7.0") format('embedded-opentype'),
+	url("fontawesome-webfont.woff2?v=4.7.0") format('woff2'),
+	url("fontawesome-webfont.woff?v=4.7.0") format('woff'),
+	url("fontawesome-webfont.ttf?v=4.7.0") format('truetype'),
+	url("fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format('svg');
 		font-weight:normal;font-style:normal
 }
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -440,14 +440,14 @@ a,hr{padding:0}a,button,input,select,textarea{margin:0}article,aside,details,fig
 /* Start:/bitrix/templates/white_park/template_styles.css?148276403656095*/
 @font-face {
   font-family: 'Minion Pro';
-  src: url("/bitrix/templates/white_park/MinionPro-Regular.otf"); 
+  src: url("MinionPro-Regular.otf"); 
 }
 @font-face {
     font-family: "Myriad Pro";
-    src: url("/bitrix/templates/white_park/./MyriadProRegular.eot");
-    src: url("/bitrix/templates/white_park/./MyriadProRegular.eot?#iefix")format("embedded-opentype"),
-    url("/bitrix/templates/white_park/./MyriadProRegular.woff") format("woff"),
-    url("/bitrix/templates/white_park/./MyriadProRegular.ttf") format("truetype");
+    src: url("MyriadProRegular.eot");
+    src: url("MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("MyriadProRegular.woff") format("woff"),
+    url("MyriadProRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -512,7 +512,7 @@ a{
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 20px;
-	background-image: url("/ico-adrress.png");
+	background-image: url("ico-adrress.png");
 	background-repeat: no-repeat;
 	padding-left: 34px;
 	background-position-y: 3px;
@@ -525,7 +525,7 @@ a{
 	font-weight: 700;
 	line-height: 30px;
 	text-decoration: none;
-	background-image: url("/ico-phone.png");
+	background-image: url("ico-phone.png");
 	background-repeat: no-repeat;
 	padding-left: 32px;
 	background-position-y: 8px;

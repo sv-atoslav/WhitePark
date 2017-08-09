@@ -170,6 +170,48 @@
 			$(".pop .spec-calendar").val("")
 		})
 	</script>
+	<% if action_name=="kitchen" %><script>
+		$(document).ready(function(){
+			var owl = $('.dishes-block .owl-carousel').owlCarousel({
+			    loop:false,
+			    margin:0,
+			    nav:false,
+			    items:1,
+			    dots:false
+			})
+			$('.arrow-left').click(function() {
+			    owl.trigger('prev.owl.carousel');
+			    SetActive();
+			})
+			$('.arrow-right').click(function() {
+			    owl.trigger('next.owl.carousel');
+			    SetActive();
+			})
+			$(".dishes-block h2").each(function(index) {
+				var point="point";
+				if(index==0){
+					point=point+" active";
+				}
+				$( ".dishes-block-points " ).append( '<div class="'+point+'" id="'+index +'">'+$(this).text()+"</div>" );
+				});
+			$("body").on("click",".point",function(){
+				owl.trigger('to.owl.carousel', $(this).attr("id"));
+				$(".point").removeClass("active");
+				$(this).addClass("active") ;
+			})
+			owl.on('changed.owl.carousel', function() {
+				SetActive();
+			});
+		});
+		function SetActive(){
+			var currentIndex = $('div.owl-carousel .active').index() ;
+			$(".point").removeClass("active");
+			$("#"+currentIndex+'.point').addClass("active") ;
+			var currentIndex = $('div.owl-carousel .active').index() ;
+			$(".point").removeClass("active");
+			$("#"+currentIndex+'.point').addClass("active") ;
+		}
+	</script><% end %>
 <!--  END  SCRIPT -->
 <div class="pop">
 	<div class="background close-pop"></div>
