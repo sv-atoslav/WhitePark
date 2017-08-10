@@ -69,6 +69,13 @@ class Admin::PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:title, :description)
+      params.require(:photo).permit(:image, :description)
+    end
+
+    def upload
+      uploaded_io = params[:person][:picture]
+      File.open(Rails.root.join('assets', 'wpimg', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
     end
 end

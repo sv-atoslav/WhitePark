@@ -10,10 +10,12 @@
     <th colspan="3"></th>
   </tr></thead>
   <tbody><% @photos.each do |photo| %><tr>
-    <td><%= photo.title %></td>
-    <td><% if photo.title.nil? %>not exist
-      <% else %><%= image_tag(photo.title , style: "width: 100px;", alt: photo.description) %>
-    <% end %></td>
+    <% if photo.image_stored? %>
+      <td><%= image_tag(photo.image.url , style: "width: 100px;", alt: photo.description) %></td>
+      <td><%= photo.image.name %></td>
+    <% else %>
+    <td colspan="2" align="center"><i>image not exist</i></td>
+    <% end %>
     <td><%= photo.description %></td>
     <td><%= link_to 'Show', admin_photo_path(photo) %></td>
     <td><%= link_to 'Edit', edit_admin_photo_path(photo) %></td>

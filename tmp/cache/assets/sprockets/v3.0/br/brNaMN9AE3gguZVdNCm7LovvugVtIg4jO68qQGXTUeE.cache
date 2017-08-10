@@ -1,0 +1,68 @@
+{:uriI"file:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/app/assets/javascripts/codemirror/mode/django/index.html?type=text/html&id=f6139f3c7f22068bfc036e73a2d5b5f1bc9e18f8939839ddc0437016fd1507d8:ET:load_pathI"app/assets/javascripts;T:filenameI"=app/assets/javascripts/codemirror/mode/django/index.html;T:	nameI"!codemirror/mode/django/index;T:logical_pathI"&codemirror/mode/django/index.html;T:content_typeI"text/html;T:sourceI"<!doctype html>
+
+<title>CodeMirror: Django template mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="../../addon/mode/overlay.js"></script>
+<script src="../xml/xml.js"></script>
+<script src="../htmlmixed/htmlmixed.js"></script>
+<script src="django.js"></script>
+<style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">Django</a>
+  </ul>
+</div>
+
+<article>
+<h2>Django template mode</h2>
+<form><textarea id="code" name="code">
+<!doctype html>
+<html>
+    <head>
+        <title>My Django web application</title>
+    </head>
+    <body>
+        <h1>
+            {{ page.title }}
+        </h1>
+        <ul class="my-list">
+            {% for item in items %}
+                <li>{% item.name %}</li>
+            {% empty %}
+                <li>You have no items in your list.</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+</textarea></form>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: "django",
+        indentUnit: 4,
+        indentWithTabs: true
+      });
+    </script>
+
+    <p>Mode for HTML with embedded Django template markup.</p>
+
+    <p><strong>MIME types defined:</strong> <code>text/x-django</code></p>
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"∫file-digest:///home/leetsworker/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/My_RP/syntez%20WhitePark%20with%20Inspinia/app/assets/javascripts/codemirror/mode/django/index.html;TTF:charsetI"
+utf-8;F:digest"%¨Sn∫So∂I„3¬ï…BÍt™Ûp4?Iπ/PÔaæÄC:lengthi:dependencies_digest"%ºﬁóã¯ÉBD=Vﬁ®Æ}\N€ø2èÍâUî\R:idI"Ef6139f3c7f22068bfc036e73a2d5b5f1bc9e18f8939839ddc0437016fd1507d8;F:
+mtimel+Â≈hY

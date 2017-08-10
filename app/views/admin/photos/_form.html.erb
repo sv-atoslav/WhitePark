@@ -5,8 +5,10 @@
       <li><%= message %></li>
     <% end %></ul>
   </div><% end %>
-  <i>укажите имя с расширением у картинки котрая лежит в папке wpimg</i>
-  <div class="field"><%= form.label :title       %><%= form.text_field :title,       id: :photo_title %></div>
+
+  <div class="field">
+    <%= form.file_field :image %>
+  </div>
   <div class="field"><%= form.label :description %><%= form.text_field :description, id: :photo_description %></div>
   <div class="actions"><%= form.submit %></div>
 <% end %>
