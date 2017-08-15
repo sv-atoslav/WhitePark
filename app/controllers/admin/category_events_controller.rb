@@ -2,7 +2,6 @@ class Admin::CategoryEventsController < ApplicationController
   before_action :set_category_event,    only: [:edit, :update, :destroy]
   before_action :search_my_group_event, only: [:show, :beauty]
   before_action :set_photo_list,        only: [:edit, :new]
-  before_action :determine_word_to_see, only: [:show, :beauty, :index]
 
   # GET /category_events
   # GET /category_events.json

@@ -4,27 +4,27 @@
   <i>эта таблица пустая</i>
 <% else %><table class="sv_table">
   <thead><tr>
+    <th>Icon</th>
     <th>Category</th>
     <th>Title</th>
     <th>Description</th>
-    <th>Icon</th>
     <th colspan="4"></th>
   </tr></thead>
   <tbody><% @events.each do |one_event| %><tr>
       <td>
-        <% if one_event.category.nil? || one_event.category < 1 %><i>category not exist</i>
-        <% else %><%= CategoryEvent.find(one_event.category).title %>
+        <% temp_icon = Photo.find_by(id: one_event.icon) %>
+        <% if temp_icon.nil? %><%= INE.html_safe %>
+        <% else %><%= image_tag( temp_icon.image.url, style: "width: 100px;", alt: temp_icon.description )%>
         <% end %>
+      </td>
+      <td>
+        <% category = CategoryEvent.find_by(id: one_event.category) %>
+        <% if category.nil? %><i>category not exist</i>
+        <% else %><%= category.title %>
+        <% end  %>
       </td>
       <td><%= one_event.title %></td>
       <td><%= one_event.description %></td>
-      <td>
-        <% if one_event.icon.nil? || one_event.icon < 1 %><i>image not exist</i>
-        <% else %>
-          <% photo = Photo.find(one_event.icon) %>
-          <%= image_tag( photo.title , style: "width: 100px;", alt: photo.description ) %>
-        <% end %>
-      </td>
       <td><%= link_to 'Show', admin_event_path(one_event) %></td>
       <td><%= link_to 'Edit', edit_admin_event_path(one_event) %></td>
       <td><%= link_to 'Destroy', admin_event_path(one_event), method: :delete, data: { confirm: 'Are you sure?' } %></td>

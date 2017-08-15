@@ -3,9 +3,12 @@
 	<hr class="spec-hr">
 	<div class="about-us-image-set"><% @event_list.each do |state| %>
 		<a href = "//localhost:3000/events/<%= state.id.to_s %><%= @word_to_see %>" class = "album">
-			<% if state.icon < 1 %><p>Картинка отсутствует</p>
-			<% else %><div class="album-bg"><%= image_tag Photo.find(state.icon).title %></div>
-			<% end %>
+			<div class="album-bg">
+				<% temp_icon = Photo.find_by(id: state.icon) %>
+				<% if temp_icon.nil? %><%= INE.html_safe %>	
+				<% else %><p><%= image_tag temp_icon.image.url %></p>
+				<% end  %>
+			</div>
 			<div class="album-title">
 				<p><%= state.title %></p>
 				<h4>подробнее</h4>

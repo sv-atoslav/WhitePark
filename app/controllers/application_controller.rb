@@ -3,21 +3,15 @@ class ApplicationController < ActionController::Base
 	
 	WillPaginate.per_page = 5
 
+	INE = "<i>картинка отсутствует</i>" 
+	WORD_TO_SEE = "/prosmotr"
+
 	before_action :divider_access
 	
 	def set_photo_list
 		@photo_list = Photo.all.order(description: :asc)
 	end
 
-	def determine_word_to_see
-		@word_to_see = "/prosmotr"
-	end
-
-	# def my_automatic_redirecter
-	# 	if way=="sitemap.xml"
-	# 		redirect_to "sitemaps/sitemap.xml"
-	# 	end
-	# end
 	def legaly_actions
 		return ["beauty", "robots"]
 	end
@@ -27,7 +21,6 @@ class ApplicationController < ActionController::Base
 		puts "action_name = " + action_name
 		info_about_wiever = " "
 		puts current_moderator
-		# current_moderator.confirmed?
 		if current_moderator.nil?
 			info_about_wiever += "guest"
 		else
@@ -37,10 +30,7 @@ class ApplicationController < ActionController::Base
 		puts "current viever =" + info_about_wiever
 		if moderator_signed_in?
 			if (controller_name == "pages" && action_name == "log_out")
-				# unauthenticate_moderator!
-				# current_moderator = nil
 				sign_out
-				redirect_to controller: "dashboards", action: "dashboard_white_park"
 			elsif (controller_name ==  "sessions" && action_name == "new")
 				redirect_to controller: "dashboards", action: "dashboard_white_park"
 				$nwtgis = 0
@@ -48,7 +38,6 @@ class ApplicationController < ActionController::Base
 		else
 			unless  	(controller_name == "guest_pages" || legaly_actions.include?(action_name) )
 				unless  (controller_name ==  "sessions"   && action_name == "new")
-					# redirect_to controller: "dashboards", action: "dashboard_white_park"
 					authenticate_moderator!
 				end
 			end

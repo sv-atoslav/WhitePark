@@ -1,5 +1,5 @@
 class GuestPagesController < ApplicationController
-	before_action :determine_word_to_see
+	
 	layout "application_guest"
 	
 	def about_us

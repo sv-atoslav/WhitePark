@@ -3,7 +3,6 @@ class Admin::ArticlesController < ApplicationController
   before_action :set_article,             only: [:update, :destroy]
   before_action :update_many_photos_list, only: [:update, :destroy, :create]
   before_action :set_photo_list,          only: [:edit, :new]
-  before_action :determine_word_to_see,   only: [:show, :index, :beauty]
 
   # GET /articles
   # GET /articles.json
@@ -103,13 +102,13 @@ class Admin::ArticlesController < ApplicationController
         end
       else
         new_list = []
-        # "wodr" need == checkbox I parametr without []
+        # "word" need == checkbox I parametr without []
         params["many_photo_ids"].each do |one_photo_id|
           new_list << one_photo_id.to_i
         end
         create_list =  new_list - @old_list
         delete_list = @old_list -  new_list
-        # when you have some problems, un commented this lines
+        # when you have some problems, uncommented this lines
         # puts "old_list is #{@old_list}"
         # puts "new_list is #{new_list}"
         # puts "create_list is #{create_list}"

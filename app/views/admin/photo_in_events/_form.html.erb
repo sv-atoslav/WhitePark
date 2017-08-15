@@ -6,11 +6,11 @@
     <% end %></ul>
   </div><% end %>
   <p>Photo</p>
-  <div class="field"><% @photo_list.each do |one_photo| %>
-    <%= image_tag(one_photo.title, alt: one_photo.description , style: "width: 100px;") %>
+  <div  class="field"><% @photo_list.each do |one_photo| %>
+    <%= image_tag(one_photo.image.url,alt: one_photo.description,style: "width: 100px;")%>
     <%= form.radio_button(:photo, one_photo.id) %>
-    <%= form.label(:photo, one_photo.title) %><br>
-  <% end %></div>
-  <div class="field"><%= form.label :event %><%= form.collection_select(:event, Event.all, :id, :title) %></div>
+    <%= form.label(:photo, one_photo.image.url) %><br>
+  <%end %></div>
+  <div  class="field"><%= form.label :event %><%= form.collection_select(:event, Event.all, :id, :title) %></div>
   <div class="actions"><%= form.submit %></div>
 <% end %>

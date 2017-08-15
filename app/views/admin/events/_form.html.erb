@@ -19,13 +19,13 @@
           <td>Many photos</td>
         </tr></thead>
         <% have_some_photo = (@old_list.to_a.any?) %>
-        <tbody><% @photo_list.each do |one_photo| %><tr>
-          <td><%= image_tag(one_photo.title, style: "width: 100px;") %></td>
+        <tbody><% @photo_list.each do |one_photo|  %><tr>
+          <td><%= image_tag(one_photo.image.url, style: "width: 100px;") %></td>
           <td><%= form.radio_button(:icon, one_photo.id) %></td>
           <!-- checkbox I parametr without [] need be == in controller params["word"] -->
           <td><% if have_some_photo %><%= check_box_tag("many_photo_ids[]", one_photo.id, @old_list.include?(one_photo.id) )%>
           <% else %><%= check_box_tag("many_photo_ids[]", one_photo.id) %>
-          <% end %></td>
+          <% end  %></td>
         </tr><% end %></tbody>
       </table></td>
       <td><div class="field"><%= form.label :description %><%= form.text_area :description, id: :event_description, class: "summernote" %></div></td>

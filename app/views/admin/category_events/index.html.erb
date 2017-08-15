@@ -13,10 +13,9 @@
     <td><%= category_event.title %></td>
     <td><%= category_event.description %></td>
     <td>
-      <% if category_event.icon.nil? || category_event.icon < 1 %>image not exist
-      <% else %>
-        <% photo = Photo.find(category_event.icon) %>
-        <%= image_tag( photo.title , style: "width: 100px;", alt: photo.description ) %>
+      <% temp_icon = Photo.find_by(id: category_event.icon) %>
+      <% if temp_icon.nil? %><%= INE.html_safe %>
+      <% else %><%= image_tag(temp_icon.image.url, style: "width: 100px;", alt: temp_icon.description)%>
       <% end %>
     </td>
     <td><%= link_to 'Show', admin_category_event_path(category_event) %></td>
