@@ -10,7 +10,7 @@
   <tbody><% @photo_in_articles.each do | one_photo_in_article| %><tr>
     <td>
       <% photo = Photo.find_by(id: one_photo_in_article.photo) %>
-      <% if photo.nil? %><%= INE.html_safe %>
+      <% if photo.nil? %><%= $INE.html_safe %>
       <% else %><%= image_tag(photo.image.url, style: "width: 100px;", alt: photo.description)%>
     </td>
     <td>

@@ -1,24 +1,28 @@
 Myapp::Application.routes.draw do
 
-  devise_for    :moderators, controllers: { 
-    unlocks:    'moderators/unlocks'   , 
-    sessions:   'moderators/sessions'  ,
-    passwords:  'moderators/passwords' , 
-    confirations:  'moderators/confirations'  , 
-    registrations: 'moderators/registrations' , 
+  devise_for        :moderators, controllers: { 
+    unlocks:        'moderators/unlocks'        , 
+    sessions:       'moderators/sessions'       ,
+    passwords:      'moderators/passwords'      , 
+    confirations:   'moderators/confirations'   , 
+    registrations:  'moderators/registrations'  , 
     # omniauth_callbacks: 'moderators/omniauth_callbacks', 
   }
-  # resources :articles, :category_events, :events, :not_published_opinions, :opinions, :photo_in_articles, :photo_in_events, :photo_in_slayders, :photos, :slayders, :tents, :users
-  
+
   # You can have the root of your site routed with "root"
   root to: 'guest_pages#main'
   get 'robots.:format' => 'application#robots', format: :text
   get 'robots' => 'application#robots', format: :text
 
-  # get '/admin', to: 'admin/dashboards#dashboard_1'
-  get  "/admin",  to: "admin/dashboards#dashboard_white_park"
+  #get '/admin',  to: 'admin/dashboards#dashboard_1'
+   get "/admin",  to: "admin/dashboards#dashboard_white_park"
   post "/admin",  to: "admin/dashboards#dashboard_white_park"
-  # moderator_root to: "admin/dashboards#dashboard_white_park"
+  #moderator_root to: "admin/dashboards#dashboard_white_park"
+
+  # for unaviable photo in slayders.. by /index
+  get "admin/photo_in_events",    to: "admin/events#index"
+  get "admin/photo_in_slayders",  to: "admin/slayders#index"
+  get "admin/photo_in_articles",  to: "admin/articles#index"
 
   namespace :admin do
     resources :articles, :category_events, :events, :not_published_opinions, :opinions, :photo_in_articles, :photo_in_events, :photo_in_slayders, :photos, :slayders, :tents, :users
@@ -26,20 +30,21 @@ Myapp::Application.routes.draw do
 
   #for correct work the last word need be = ApplicationController.word_to_see
 
-  get "articles/:id/prosmotr", to: 'admin/articles#beauty'
-  get "events/:id/prosmotr",   to: 'admin/events#beauty'
+
+  get "events/:id/prosmotr",          to: 'admin/events#beauty'
+  get "articles/:id/prosmotr",        to: 'admin/articles#beauty'
   get "category_events/:id/prosmotr", to: 'admin/category_events#beauty'
 
-  get 'WhitePark',    to: 'guest_pages#main'
-  get 'otzivi',       to: 'guest_pages#review'
-  get 'kuhnya',       to: 'guest_pages#kitchen'
-  get 'statii',       to: 'guest_pages#list_of_articles'
-  get 'o_nas',        to: 'guest_pages#about_us'
-  get 'map',          to: 'guest_pages#map_park'
-  get 'sobitia',      to: 'guest_pages#eventlist'
-  get 'kontakti',     to: 'guest_pages#contacts'
-  get 'download',     to: 'guest_pages#download_menu'
-  get "sitemap",      to: 'guest_pages#site_map'
+  get 'WhitePark',to: 'guest_pages#main'
+  get 'otzivi',   to: 'guest_pages#review'
+  get 'kuhnya',   to: 'guest_pages#kitchen'
+  get 'map',      to: 'guest_pages#map_park'
+  get 'o_nas',    to: 'guest_pages#about_us'
+  get "sitemap",  to: 'guest_pages#site_map'
+  get 'kontakti', to: 'guest_pages#contacts'
+  get 'sobitia',  to: 'guest_pages#eventlist'
+  get 'download', to: 'guest_pages#download_menu'
+  get 'statii',   to: 'guest_pages#list_of_articles'
   # get "sitemap.xml",  to: 'guest_pages#site_map', format: :xml, as: :sitemap
 
   # get '/moderators/sign_in', to: 'admin/pages#login_white_park'

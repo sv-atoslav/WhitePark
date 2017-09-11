@@ -26,7 +26,7 @@
           <!-- checkbox I parametr without [] need be == in controller params["word"] -->
           <td><% if have_some_photo %><%= check_box_tag("many_photo_ids[]", one_photo.id, @old_list.include?(one_photo.id) )%>
           <% else %><%= check_box_tag("many_photo_ids[]", one_photo.id) %>
-          <% end %></td>
+          <% end  %></td>
         </tr><% end %></tbody>
       </table></td>
       <td><div class="field"><%= form.label :description %><%= form.text_area :description, id: :article_description, class: "summernote" %></div></td>

@@ -5,16 +5,7 @@
         <li><%= message %></li>
       <% end %></ul>
   </div><% end %>
-  <p>Slayder</p>
-  <!-- I have misspelling when create table -->
-  <div class="field"><%= form.label :slyder %><%= form.collection_select(:slyder, Slayder.all, :id, :title)%></div>
-  <p>Photo</p>
-  <div  class="field"><% @photo_list.each do |one_photo| %>
-    <%= image_tag(one_photo.image.url, alt: one_photo.description, style: "width: 100px;")  %>
-    <%= form.radio_button(:photo, one_photo.id)%>
-    <%= form.label(:photo, one_photo.image.url)%><br>
-  <%end %></div>
-  <p>Descprition</p>
+  <%= image_tag( Photo.find_by(id: photo_in_slayder.photo).image.name ) %>
   <div class="field"><%=form.label :description%><%=form.text_area :description%></div>
   <div class="actions"><%= form.submit %></div>
 <% end %>

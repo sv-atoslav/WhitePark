@@ -11,7 +11,7 @@
   </tr></thead>
   <tbody><% @photos.each do |photo| %><tr>
     <% unless photo.image_stored? %>
-      <td colspan="2" align="center"><%= INE.html_safe %></td>
+      <td colspan="2" align="center"><%= $INE.html_safe %></td>
     <% else %>
       <td><%= image_tag(photo.image.url , style: "width: 100px;", alt: photo.description) %></td>
       <td><%= photo.image.name %></td>

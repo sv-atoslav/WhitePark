@@ -30,7 +30,7 @@ class Admin::CategoryEventsController < ApplicationController
   # POST /category_events
   # POST /category_events.json
   def create
-    @category_event = CategoryEvent.new(event_params)
+    @category_event = CategoryEvent.new(category_event_params)
     respond_to do |format|
       if @category_event.save
         format.html { redirect_to admin_category_event_path(@category_event), notice: 'Category event was successfully created.' }

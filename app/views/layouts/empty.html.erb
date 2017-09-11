@@ -14,8 +14,8 @@
         <%= csrf_meta_tags %>
     </head>
     <body class="gray-bg">
-        <div class="middle-box text-center loginscreen  animated fadeInDown"><div>
-            <div><h1 class="logo-name">IN+</h1></div>
+        <div class="middle-box text-center loginscreen animated fadeInDown">
+            <h1 class="logo-name">IN+</h1>
             <!-- Main view  -->
             <%= yield %>
             <!-- Include javascript per-controller - vendor plugins -->
@@ -23,6 +23,6 @@
             <!-- Include javascript per-view -->
             <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
             <%= yield :javascript %>
-        </div></div>
+        </div>
     </body>
 </html>

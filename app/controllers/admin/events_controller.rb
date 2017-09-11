@@ -1,8 +1,8 @@
-class Admin::EventsController < ApplicationController  
-  before_action :search_my_group_photo,   only: [:beauty, :edit, :show]
-  before_action :set_event,               only: [:update, :destroy]
-  before_action :update_many_photos_list, only: [:update, :destroy, :create]
+class Admin::EventsController < ApplicationController
   before_action :set_photo_list,          only: [:edit, :new]
+  before_action :set_event,               only: [:update, :destroy]
+  before_action :search_my_group_photo,   only: [:beauty, :edit, :show]
+  before_action :update_many_photos_list, only: [:update, :destroy, :create]
 
   # GET /events
   # GET /events.json

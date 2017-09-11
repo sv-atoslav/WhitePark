@@ -6,7 +6,7 @@
 	<% CategoryEvent.all.each do |one_category| %>
 		<% ssilka ="//localhost:3000/category_events/" %>
 		<% ssilka += one_category.id.to_s %>
-		<% ssilka += @word_to_see %>
+		<% ssilka += $WORD_TO_SEE %>
 		<br><a href="<%= ssilka %>"><%= one_category.title %></a>
 	<% end %>
 	<br><%= link_to "Карта площадки",	action: "map_park"	%>
