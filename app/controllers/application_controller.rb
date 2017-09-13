@@ -28,16 +28,17 @@ class ApplicationController < ActionController::Base
 		end
 		puts "current viever =" + info_about_wiever
 		if moderator_signed_in?
-			if (	controller_name == "pages"    && action_name == "log_out")
+			if (controller_name == "guest_pages" && action_name == "site_map")
+				puts "go out"
 				sign_out
-			elsif (	controller_name == "sessions" && action_name == "new")
-				redirect_to controller: "dashboards", action: "dashboard_white_park"
-				$nwtgis = 0
+				puts "current viever = " + info_about_wiever
 			end
 		else
 			unless (	controller_name == "guest_pages" || legaly_actions.include?(action_name) )
 				unless (controller_name ==  "sessions"   && action_name == "new")
+					puts "go into site"
 					authenticate_moderator!
+					puts "current viever =" + info_about_wiever
 				end
 			end
 		end

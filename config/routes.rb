@@ -19,18 +19,11 @@ Myapp::Application.routes.draw do
   post "/admin",  to: "admin/dashboards#dashboard_white_park"
   #moderator_root to: "admin/dashboards#dashboard_white_park"
 
-  # for unaviable photo in slayders.. by /index
-  get "admin/photo_in_events",    to: "admin/events#index"
-  get "admin/photo_in_slayders",  to: "admin/slayders#index"
-  get "admin/photo_in_articles",  to: "admin/articles#index"
-
   namespace :admin do
-    resources :articles, :category_events, :events, :not_published_opinions, :opinions, :photo_in_articles, :photo_in_events, :photo_in_slayders, :photos, :slayders, :tents, :users
+    resources :articles, :events, :category_events, :not_published_opinions, :opinions, :photo_in_articles, :photo_in_events, :photo_in_slayders, :photos, :slayders, :tents, :users
   end
 
   #for correct work the last word need be = ApplicationController.word_to_see
-
-
   get "events/:id/prosmotr",          to: 'admin/events#beauty'
   get "articles/:id/prosmotr",        to: 'admin/articles#beauty'
   get "category_events/:id/prosmotr", to: 'admin/category_events#beauty'

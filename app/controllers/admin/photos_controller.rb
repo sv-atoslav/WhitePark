@@ -54,6 +54,15 @@ class Admin::PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
+    PhotoInEvent.where(  photo: @photo.id).each do |need_destroy|
+      need_destroy.destroy
+    end
+    PhotoInArticle.where(photo: @photo.id).each do |need_destroy|
+      need_destroy.destroy
+    end
+    PhotoInSlayder.where(photo: @photo.id).each do |need_destroy|
+      need_destroy.destroy
+    end
     @photo.destroy
     respond_to do |format|
       format.html { redirect_to action: "index", notice: 'Photo was successfully destroyed.' }

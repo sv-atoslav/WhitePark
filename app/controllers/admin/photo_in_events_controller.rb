@@ -5,7 +5,8 @@ class Admin::PhotoInEventsController < ApplicationController
   # GET /photo_in_events
   # GET /photo_in_events.json
   def index
-    @photo_in_events = PhotoInEvent.all.order(updated_at: :desc)
+    # @photo_in_events = PhotoInEvent.all.order(updated_at: :desc)
+    redirect_to admin_events_path
   end
 
   # GET /photo_in_events/1

@@ -4,9 +4,10 @@ class Admin::PhotoInSlaydersController < ApplicationController
 
   # GET /photo_in_slayders
   # GET /photo_in_slayders.json
-  # def index
-  #   @list_of_slayders = Slayder.all
-  # end
+  def index
+    # @list_of_slayders = Slayder.all
+    redirect_to admin_slayders_path
+  end
 
   # GET /photo_in_slayders/1
   # GET /photo_in_slayders/1.json

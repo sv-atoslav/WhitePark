@@ -5,7 +5,8 @@ class Admin::PhotoInArticlesController < ApplicationController
   # GET /photo_in_articles
   # GET /photo_in_articles.json
   def index
-    @photo_in_articles = PhotoInArticle.all.order(updated_at: :desc)
+    # @photo_in_articles = PhotoInArticle.all.order(updated_at: :desc)
+    redirect_to admin_articles_path
   end
 
   # GET /photo_in_articles/1
